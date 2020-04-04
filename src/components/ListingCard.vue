@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white shadow-xl rounded">
+    <div class="w-full bg-white shadow-xl rounded">
         <h3>{{ title }}</h3>
     </div>
 </template>
