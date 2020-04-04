@@ -14,7 +14,10 @@ const templateDecorator = () => ({
     <div class="sm:invisible md:visible lg:invisible xl:invisible">MD</div>
     <div class="sm:invisible md:invisible lg:visible xl:invisible">LG</div>
     <div class="sm:invisible md:invisible lg:invisible xl:visible">
-      <img src="@/assets/icons/computer-desktop.svg">
+    <img src="@/assets/logo.png">
+    <img src="@/assets/icons/computer-desktop.svg">
+    <img src="@/assets/icons/computer-desktop.svg?inline">
+    <img src="@/assets/icons/computer-desktop.svg?data">
     </div>
   </div>
 </div>
