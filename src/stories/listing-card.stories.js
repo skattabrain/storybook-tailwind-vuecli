@@ -1,28 +1,30 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // import { action } from '@storybook/addon-actions';
 
-import ListingCard from '../components/ListingCard.vue';
+import listingImage from '@/assets/demo/ferrari.jpg';
+import ListingCard from '@/components/ListingCard.vue';
+import ScreenSizeIndicator from '@/components/ScreenSizeIndicator.vue';
 
 const templateDecorator = () => ({
-  template: `
-<div class="h-screen w-screen bg-gray-300 flex flex-col items-center justify-center">
-  <div class="w-1/4">
-      <story />
-  </div>
-  <div class="mt-6">
-    <div class="sm:visible md:invisible lg:invisible xl:invisible">SM</div>
-    <div class="sm:invisible md:visible lg:invisible xl:invisible">MD</div>
-    <div class="sm:invisible md:invisible lg:visible xl:invisible">LG</div>
-    <div class="sm:invisible md:invisible lg:invisible xl:visible">
-    <img src="@/assets/logo.png">
-    <img src="@/assets/icons/computer-desktop.svg">
-    <img src="@/assets/icons/computer-desktop.svg?inline">
-    <img src="@/assets/icons/computer-desktop.svg?data">
-    </div>
-  </div>
-</div>
-    `,
+  components: { ScreenSizeIndicator },
+  data: () => ({
+    wrapperWidthClasses: 'w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4',
+  }),
+  template: '<ScreenSizeIndicator :wrapper-width-classes="wrapperWidthClasses"><story /></ScreenSizeIndicator>',
 });
+
+const listing = {
+  id: 32489,
+  description: `The 360 Challenge Stradale, the 430 Scuderia, the 458 Speciale, and now the 488 Pista.`,
+  image: listingImage,
+  title: '2018 Ferrari 488 Pista',
+  price: 350000,
+  miles: 23000,
+  dealer: 'Rad Ferrari USA',
+  stockNumber: 'WS-32489',
+  location: 'Las Vegas, NV',
+  url: '#',
+};
 
 export default {
   component: ListingCard,
@@ -32,8 +34,19 @@ export default {
   title: 'Components/Listing Card',
 };
 
-export const withText = () => ({
+export const withImage = () => ({
   components: { ListingCard },
-  data: () => ({}),
-  template: '<listing-card title="My Listing" />',
+  data: () => ({
+    ...listing,
+  }),
+  template: '<listing-card :id="id" :url="url" :location="location" :stock-number="stockNumber" :title="title" :price="price" :miles="miles" :dealer="dealer" :description="description" :image-url="image" />',
+});
+
+export const withoutImage = () => ({
+  components: { ListingCard },
+  data: () => ({
+    ...listing,
+    image: null,
+  }),
+  template: '<listing-card :id="id" :url="url" :location="location" :stock-number="stockNumber" :title="title" :price="price" :miles="miles" :dealer="dealer" :description="description" :image-url="image" />',
 });
