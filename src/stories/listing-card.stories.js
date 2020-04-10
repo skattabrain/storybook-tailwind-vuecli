@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // import { action } from '@storybook/addon-actions';
 
-import listingImage from '@/assets/demo/ferrari.jpg';
+import listing from '@/mocks/listing';
 import ListingCard from '@/components/ListingCard.vue';
 import ScreenSizeIndicator from '@/components/ScreenSizeIndicator.vue';
 
@@ -13,18 +13,6 @@ const templateDecorator = () => ({
   template: '<ScreenSizeIndicator :wrapper-width-classes="wrapperWidthClasses"><story /></ScreenSizeIndicator>',
 });
 
-const listing = {
-  id: 32489,
-  description: `The 360 Challenge Stradale, the 430 Scuderia, the 458 Speciale, and now the 488 Pista.`,
-  image: listingImage,
-  title: '2018 Ferrari 488 Pista',
-  price: 350000,
-  miles: 23000,
-  dealer: 'Rad Ferrari USA',
-  stockNumber: 'WS-32489',
-  location: 'Las Vegas, NV',
-  url: '#',
-};
 
 export default {
   component: ListingCard,
