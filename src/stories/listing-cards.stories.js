@@ -1,6 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-// import { action } from '@storybook/addon-actions';
-
 import listings from '@/mocks/listings';
 import ListingCards from '@/components/ListingCards.vue';
 import ScreenSizeIndicator from '@/components/ScreenSizeIndicator.vue';

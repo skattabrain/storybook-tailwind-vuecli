@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-// import { action } from '@storybook/addon-actions';
 import tw from '../../tailwind.config';
 
 function isObject(value) {
