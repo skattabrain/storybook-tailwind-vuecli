@@ -1,13 +1,13 @@
 import listing from '@/mocks/listing';
 import ListingCard from '@/components/ListingCard.vue';
-import ScreenSizeIndicator from '@/components/ScreenSizeIndicator.vue';
+import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 
 const templateDecorator = () => ({
-  components: { ScreenSizeIndicator },
+  components: { StoryWrapper },
   data: () => ({
     wrapperWidthClasses: 'w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4',
   }),
-  template: '<ScreenSizeIndicator :wrapper-width-classes="wrapperWidthClasses"><story /></ScreenSizeIndicator>',
+  template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
 });
 
 
