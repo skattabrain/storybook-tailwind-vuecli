@@ -1,6 +1,6 @@
 <template>
   <span class="brand-logo" :class="[dark ? 'text-white' : 'text-dark']">
-    WE<span class="text-purple-500">SELL</span>LIMOS<span class="text-purple-500">.COM</span>
+    SOME<span class="text-purple-500">BRAND</span>HERE<span class="text-purple-500">.COM</span>
   </span>
 </template>
 
