@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-gray-200">
+  <div class="flex flex-col min-h-screen w-screen bg-gray-200">
     <layout-navigation :items="navItems" />
     <layout-header :heading="heading" />
     <layout-main class="flex-grow">

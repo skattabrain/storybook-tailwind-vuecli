@@ -18,16 +18,16 @@ export default {
   title: 'Brand/Logo',
 };
 
-export const darkBackground = () => ({
+export const light = () => ({
   components: { BrandLogo },
   data: () => ({
   }),
-  template: '<div class="bg-gray-800"><brand-logo /></div>'
+  template: '<brand-logo />'
 });
 
-export const lightBackground = () => ({
+export const dark = () => ({
   components: { BrandLogo },
   data: () => ({
   }),
-  template: '<div class="bg-white"><brand-logo :dark="false" /></div>'
+  template: '<brand-logo :dark="true" />'
 });
