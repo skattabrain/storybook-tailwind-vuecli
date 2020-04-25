@@ -5,7 +5,7 @@ import { boolean } from '@storybook/addon-knobs';
 const templateDecorator = () => ({
   components: { StoryWrapper },
   data: () => ({
-    wrapperWidthClasses: 'w-full text-center text-4xl',
+    wrapperWidthClasses: 'text-4xl',
   }),
   template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
 });
