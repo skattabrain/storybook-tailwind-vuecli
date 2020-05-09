@@ -1,39 +1,8 @@
-import tw from '../../tailwind.config';
-
-function isObject(value) {
-  return value && typeof value === 'object' && value.constructor === Object;
-}
-
-const colorMapper = (colors) => {
-  const twColors = Object.keys(colors);
-
-  return twColors.map((color) => {
-    if (isObject(colors[color])) {
-      const twColorVariations = Object.keys(colors[color]);
-      const variations = twColorVariations.map((variation) => ({
-        color: variation,
-        bg: `bg-${color}-${variation}`,
-        hex: colors[color][variation],
-      }));
-
-      return { name: color, variations };
-    }
-    return {
-      name: color,
-      variations: [{
-        color,
-        bg: `bg-${color}`,
-        hex: colors[color],
-      }],
-    };
-  });
-};
-
-const colors = colorMapper(tw.theme.colors);
+import { colorMap } from '../../src/utils/colors.js';
 
 const templateDecorator = () => ({
   template: `
-<div class="bg-white">
+<div class="min-h-screen w-screen">
     <div class="container pt-6">
       <story />
     </div>
@@ -49,9 +18,8 @@ export default {
 };
 
 export const colorPalette = () => ({
-  components: { },
   data: () => ({
-    colors,
+    colors: colorMap(),
   }),
   template: `
 <div>

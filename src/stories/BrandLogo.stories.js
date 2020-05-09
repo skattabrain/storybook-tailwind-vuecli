@@ -1,10 +1,11 @@
 import BrandLogo from '@/components/BrandLogo.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
+import { boolean } from '@storybook/addon-knobs';
 
 const templateDecorator = () => ({
   components: { StoryWrapper },
   data: () => ({
-    wrapperWidthClasses: 'w-full text-center text-4xl',
+    wrapperWidthClasses: 'text-4xl',
   }),
   template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
 });
@@ -15,19 +16,15 @@ export default {
   decorators: [
     templateDecorator,
   ],
-  title: 'Brand/Logo',
+  title: 'Brand',
 };
 
-export const darkBackground = () => ({
+export const logo = () => ({
   components: { BrandLogo },
-  data: () => ({
-  }),
-  template: '<div class="bg-gray-800"><brand-logo /></div>'
-});
-
-export const lightBackground = () => ({
-  components: { BrandLogo },
-  data: () => ({
-  }),
-  template: '<div class="bg-white"><brand-logo :dark="false" /></div>'
+  props: {
+    isDark: {
+      default: boolean('Dark', false)
+    }
+  },
+  template: '<brand-logo :dark="isDark" />'
 });

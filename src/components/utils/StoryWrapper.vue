@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen w-screen py-3 bg-gray-300 flex flex-col items-center justify-center">
+  <div class="w-screen py-3 flex flex-col items-center">
     <div :class="wrapperWidthClasses">
       <slot></slot>
     </div>
