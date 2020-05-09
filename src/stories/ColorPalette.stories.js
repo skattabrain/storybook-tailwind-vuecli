@@ -2,7 +2,7 @@ import { colorMap } from '../../src/utils/colors.js';
 
 const templateDecorator = () => ({
   template: `
-<div class="bg-white min-h-screen w-screen">
+<div class="min-h-screen w-screen">
     <div class="container pt-6">
       <story />
     </div>
