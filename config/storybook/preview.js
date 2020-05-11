@@ -5,7 +5,10 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { colorMapFlat } from '../../src/utils/colors.js';
 
 addParameters({
-  backgrounds: colorMapFlat('bg-gray-400'),
+  backgrounds: {
+    default: 'bg-gray-400',
+    values: colorMapFlat('bg-gray-400')
+  },
   layout: 'centered',
   viewport: {
     viewports: INITIAL_VIEWPORTS
