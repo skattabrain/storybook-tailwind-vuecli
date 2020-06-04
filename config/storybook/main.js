@@ -11,4 +11,4 @@ module.exports = {
     '@storybook/addon-storysource',
     '@storybook/addon-viewport',
   ],
-};
+}

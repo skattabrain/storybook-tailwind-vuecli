@@ -2,6 +2,7 @@ module.exports = function ({ addBase, theme }) {
   addBase({
     'h1': {
       fontSize: theme('fontSize.2xl'),
+      fontFamily: 'Bangers',
       span: {
         fontSize: theme('fontSize.xl'),
       }

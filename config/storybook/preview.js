@@ -1,10 +1,10 @@
-import './storybook.css';
-import '../../src/styles.css';
-import { addParameters } from '@storybook/vue';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { colorMapFlat } from '../../src/utils/colors.js';
-require('typeface-roboto');
-require('typeface-bangers');
+import './storybook.css'
+import '../../src/styles.css'
+import { addParameters } from '@storybook/vue'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { colorMapFlat } from '../../src/utils/colors.js'
+require('typeface-roboto')
+require('typeface-bangers')
 
 addParameters({
   backgrounds: {
@@ -15,4 +15,4 @@ addParameters({
   viewport: {
     viewports: INITIAL_VIEWPORTS
   },
-});
+})

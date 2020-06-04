@@ -251,7 +251,7 @@ const defaultTheme = {
       '"Segoe UI Symbol"',
       '"Noto Color Emoji"',
     ],
-    serif: ['Bangers', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+    serif: ['Georgia', 'Cambria', 'Bangers', '"Times New Roman"', 'Times', 'serif'],
     mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
   },
   fontSize: {
@@ -626,11 +626,13 @@ module.exports = {
   prefix: '',
   important: false,
   separator: ':',
-  purge: [
-    // './src/**/*.stories.js',
-    './src/**/*.html',
-    './src/**/*.vue',
-  ],
+  purge: {
+    enabled: false,
+    content: [
+      './src/**/*.stories.js',
+      './src/**/*.vue',
+    ]
+  },
   theme,
   variants: {
     accessibility: ['responsive', 'focus'],

@@ -601,6 +601,7 @@ video {
 
 h1 {
   font-size: 1.5rem;
+  font-family: Bangers;
 }
 
 h1 span {
@@ -651,12 +652,7 @@ td:first-child {
   color: #c53030;
   color: rgba(197, 48, 48, var(--text-opacity));
   font-weight: 700;
-  font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: 0.05em;
-}
-
-h1, h2, h3 {
-  font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .container {
@@ -6508,7 +6504,7 @@ h1, h2, h3 {
 }
 
 .font-serif {
-  font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
 }
 
 .font-mono {
@@ -25136,7 +25132,7 @@ h1, h2, h3 {
   }
 
   .sm\:font-serif {
-    font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .sm\:font-mono {
@@ -43750,7 +43746,7 @@ h1, h2, h3 {
   }
 
   .md\:font-serif {
-    font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .md\:font-mono {
@@ -62364,7 +62360,7 @@ h1, h2, h3 {
   }
 
   .lg\:font-serif {
-    font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .lg\:font-mono {
@@ -80978,7 +80974,7 @@ h1, h2, h3 {
   }
 
   .xl\:font-serif {
-    font-family: Bangers, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .xl\:font-mono {
