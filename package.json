@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
+    "tailwind:build": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css"
   },
   "dependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
@@ -47,6 +48,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.1.2",
     "postcss-import": "^12.0.1",
+    "stylelint-config-recommended": "^3.0.0",
     "vue-cli-plugin-storybook": "~1.2.2",
     "vue-cli-plugin-svg": "~0.1.3",
     "vue-docgen-loader": "^1.5.0",
