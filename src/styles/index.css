@@ -1,7 +1,7 @@
 @tailwind base;
 
 td:first-child {
-  @apply text-red-700 font-bold tracking-wider;
+  @apply text-red-700 font-bold tracking-wider font-serif;
 }
 
 @tailwind components;

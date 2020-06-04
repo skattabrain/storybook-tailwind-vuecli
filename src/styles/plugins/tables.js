@@ -5,10 +5,12 @@ module.exports = function ({ addBase, theme }) {
       width: '100%',
       backgroundColor: theme('colors.white')
     },
-    tr: {
-      '&:hover': {
-        backgroundColor: theme('colors.gray.200'),
-        cursor: 'pointer',
+    tbody: {
+      tr: {
+        '&:hover': {
+          backgroundColor: theme('colors.gray.200'),
+          cursor: 'pointer',
+        }
       }
     },
     th: {
@@ -19,7 +21,7 @@ module.exports = function ({ addBase, theme }) {
     },
     td: {
       textAlign: 'left',
-      padding: '10px',
+      padding: '10px'
     },
   })
 }

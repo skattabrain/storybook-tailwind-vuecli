@@ -616,6 +616,9 @@ const defaultTheme = {
 const myCustomTheme = {
   colors: {
     black: '#111',
+  },
+  fontFamily: {
+    serif: ['Bangers', 'Georgia', 'Cambria', 'Bangers', '"Times New Roman"', 'Times', 'serif'],
   }
 }
 
