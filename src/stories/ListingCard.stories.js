@@ -1,6 +1,7 @@
 import listing from '@/mocks/listing';
 import ListingCard from '@/components/ListingCard.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
+import { text, number } from '@storybook/addon-knobs';
 
 const templateDecorator = () => ({
   components: { StoryWrapper },
@@ -24,6 +25,17 @@ export const withImage = () => ({
   data: () => ({
     ...listing,
   }),
+  props: {
+    title: {
+      default: text('Title', listing.title)
+    },
+    price: {
+      default: number('Price', listing.price)
+    },
+    miles: {
+      default: number('Miles', listing.miles)
+    }
+  },
   template: '<listing-card :id="id" :url="url" :location="location" :stock-number="stockNumber" :title="title" :price="price" :miles="miles" :dealer="dealer" :description="description" :image-url="image" />',
 });
 

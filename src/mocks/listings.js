@@ -17,7 +17,7 @@ export default [
     image: ferrari430,
     title: '2018 Ferrari 488 Pista',
     price: 350000,
-    miles: 23000,
+    miles: 230,
     dealer: 'Rad Ferrari USA',
     stockNumber: 'WS-32489',
     location: 'Las Vegas, NV',
