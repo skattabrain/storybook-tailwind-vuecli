@@ -4,7 +4,7 @@
     <div class="h-48 bg-gray-900 rounded-t">
       <img :src="imageSrc" :alt="title" class="h-full object-cover rounded-t w-full">
       <div class="transform -translate-y-full flex float-right items-center p-1">
-        <span class="inilne-block bg-gray-800-80 text-gray-200 text-xs px-1 rounded-sm">
+        <span class="inline-block bg-gray-900 bg-opacity-50 text-gray-200 text-xs px-1 rounded-sm">
           {{ stockNumber }}
         </span>
       </div>
