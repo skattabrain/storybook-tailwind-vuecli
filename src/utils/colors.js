@@ -29,13 +29,12 @@ const colorMapper = (colors) => {
   });
 };
 
-const colorMapperFlat = (colors, defaultColor) => {
+const colorMapperFlat = (colors) => {
   const newColors = colors.flatMap(mainColor => {
     return mainColor.variations.map(variation => {
       return {
         name: variation.bg,
-        value: variation.hex,
-        default: (defaultColor === variation.bg)
+        value: variation.hex
       }
     });
   });
@@ -43,6 +42,6 @@ const colorMapperFlat = (colors, defaultColor) => {
   return newColors;
 };
 
-export const colorMapFlat = (defaultColor) => colorMapperFlat(colorMapper(tw.theme.colors), defaultColor);
+export const colorMapFlat = () => colorMapperFlat(colorMapper(tw.theme.colors));
 
 export const colorMap = () => colorMapper(tw.theme.colors);

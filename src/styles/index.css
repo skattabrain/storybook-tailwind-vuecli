@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:800&text=WESELLLIMOS.COM&display=swap');
-
 @tailwind base;
+
+td:first-child {
+  @apply text-red-700 font-bold font-serif tracking-wider;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
 @tailwind components;
 @tailwind utilities;

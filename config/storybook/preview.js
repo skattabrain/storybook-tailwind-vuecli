@@ -3,9 +3,14 @@ import '../../src/styles.css';
 import { addParameters } from '@storybook/vue';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { colorMapFlat } from '../../src/utils/colors.js';
+require('typeface-roboto');
+require('typeface-bangers');
 
 addParameters({
-  backgrounds: colorMapFlat('bg-gray-400'),
+  backgrounds: {
+    default: 'bg-gray-300',
+    values: colorMapFlat('bg-gray-200'),
+  },
   layout: 'centered',
   viewport: {
     viewports: INITIAL_VIEWPORTS
