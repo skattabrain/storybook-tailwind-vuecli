@@ -629,7 +629,7 @@ module.exports = {
   important: false,
   separator: ':',
   purge: {
-    enabled: false,
+    enabled: (process.argv.includes('-purge')),
     content: [
       './src/**/*.stories.js',
       './src/**/*.vue',
