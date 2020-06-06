@@ -1,7 +1,35 @@
 @tailwind base;
 
-td:first-child {
+td:last-child {
   @apply text-red-700 font-bold tracking-wider font-serif;
+}
+
+.btn-alt {
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.btn-alt.btn-alt-primary {
+  @apply bg-primary-600 text-primary-100;
+}
+
+.btn-alt.btn-alt-primary:hover {
+  @apply bg-primary-700 text-white;
+}
+
+.btn-alt.btn-alt-secondary {
+  @apply bg-secondary-600 text-secondary-100;
+}
+
+.btn-alt.btn-alt-secondary:hover {
+  @apply bg-secondary-800 text-white;
 }
 
 @tailwind components;

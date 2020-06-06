@@ -3,7 +3,7 @@ import '../../src/styles.css'
 import { addParameters } from '@storybook/vue'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { colorMapFlat } from '../../src/utils/colors.js'
-require('typeface-roboto')
+require('typeface-open-sans')
 require('typeface-bangers')
 
 addParameters({
