@@ -632,7 +632,7 @@ const myCustomTheme = {
   }
 }
 
-const theme = _.merge(defaultTheme, myCustomTheme);
+const theme = _.merge({}, defaultTheme, myCustomTheme);
 
 module.exports = {
   prefix: '',
