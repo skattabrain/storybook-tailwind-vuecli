@@ -653,7 +653,7 @@ td:last-child {
   color: rgba(197, 48, 48, var(--text-opacity));
   font-weight: 700;
   letter-spacing: 0.05em;
-  font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+  font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
 }
 
 .btn-alt {
@@ -7320,7 +7320,7 @@ td:last-child {
 }
 
 .font-serif {
-  font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+  font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
 }
 
 .font-mono {
@@ -28028,7 +28028,7 @@ td:last-child {
   }
 
   .sm\:font-serif {
-    font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+    font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .sm\:font-mono {
@@ -48722,7 +48722,7 @@ td:last-child {
   }
 
   .md\:font-serif {
-    font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+    font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .md\:font-mono {
@@ -69416,7 +69416,7 @@ td:last-child {
   }
 
   .lg\:font-serif {
-    font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+    font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .lg\:font-mono {
@@ -90110,7 +90110,7 @@ td:last-child {
   }
 
   .xl\:font-serif {
-    font-family: Nosifer, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
+    font-family: Bangers, Georgia, Cambria, Bangers, "Times New Roman", Times, serif;
   }
 
   .xl\:font-mono {
