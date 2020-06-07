@@ -1,3 +1,4 @@
+// TODO - review/cleanup up this file as the needs of the addon-background has changed
 import tw from '../../tailwind.config';
 
 function isObject(value) {
