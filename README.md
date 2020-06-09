@@ -6,17 +6,19 @@ Probably steer clear of PNPM at this time
 npm install
 ```
 
-### Compiles, serves and hot-reloads Storybook for realtime development
-```
-npm run storybook:serve
-```
-
-### Compile Tailwind Config
+### Compile Tailwind
+If at anytime you need to update the CSS because of tailwind.config changes, run
 ```
 npm run tailwind:build
 ```
+Note that if your Storybook server is running, you will not need to reload it.
 
-### Purge unused CSS classes
+### Compile Tailwind & Purge unused CSS classes
 ```
 npm run tailwind:build:purge
+```
+
+### Compiles, serves and hot-reloads Storybook for realtime development
+```
+npm run storybook:serve
 ```
