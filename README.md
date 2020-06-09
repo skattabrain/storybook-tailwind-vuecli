@@ -1,4 +1,4 @@
-# Vue CLI & Tailwind Sample App
+# Storybook, Tailwind, Vue CLI Sample App 
 
 ## Project setup
 Probably steer clear of PNPM at this time
@@ -6,7 +6,7 @@ Probably steer clear of PNPM at this time
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles, serves and hot-reloads Storybook for realtime development
 ```
 npm run storybook:serve
 ```
