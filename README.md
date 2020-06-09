@@ -1,29 +1,22 @@
-# vueclidemo
+# Vue CLI & Tailwind Sample App
 
 ## Project setup
+Probably steer clear of PNPM at this time
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run storybook:serve
 ```
 
-### Compiles and minifies for production
+### Compile Tailwind Config
 ```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
+npm run tailwind:build
 ```
 
-### Lints and fixes files
+### Purge unused CSS classes
 ```
-npm run lint
+npm run tailwind:build:purge
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
