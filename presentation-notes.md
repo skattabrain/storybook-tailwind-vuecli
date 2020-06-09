@@ -24,7 +24,7 @@
 
 ## How to use
 * First try to not write any CSS
-** use utilities to form the backbone of your component markup
+  use utilities to form the backbone of your component markup
 * When you do need to write new CSS, there are a few ways you can do it
-** Plugins
-** list more
+  Plugins
+  list more
