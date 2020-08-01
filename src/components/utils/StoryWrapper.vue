@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen py-3 flex flex-col items-center">
     <div :class="wrapperWidthClasses">
-      <slot></slot>
+      <slot />
     </div>
     <ScreenSizeIndicator />
   </div>

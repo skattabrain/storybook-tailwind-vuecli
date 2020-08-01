@@ -1,5 +1,3 @@
-import { text } from '@storybook/addon-knobs';
-
 const templateDecorator = () => ({
   data: () => ({
     wrapperWidthClasses: 'text-4xl',

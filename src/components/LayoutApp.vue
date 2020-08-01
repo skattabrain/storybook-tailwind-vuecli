@@ -32,7 +32,7 @@ export default {
     },
     navItems: {
       default: null,
-      array: String
+      type: Array
     }
   },
   data: () => ({

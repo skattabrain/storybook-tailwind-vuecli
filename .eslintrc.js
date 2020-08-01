@@ -6,8 +6,8 @@ module.exports = {
   },
 
   extends: [
-    'plugin:vue/essential',
     'eslint:recommended',
+    'plugin:vue/recommended',
   ],
 
   parserOptions: {
@@ -15,6 +15,7 @@ module.exports = {
   },
 
   rules: {
+    'vue/comma-dangle': 2,
     'no-console': 'off',
     'no-debugger': 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
@@ -30,5 +31,5 @@ module.exports = {
         jest: true,
       },
     },
-  ],
+  ]
 };

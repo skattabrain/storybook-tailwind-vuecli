@@ -1,5 +1,8 @@
 <template>
-  <span class="brand-logo" :class="[dark ? 'text-dark' : 'text-white']">
+  <span
+    class="brand-logo"
+    :class="[dark ? 'text-dark' : 'text-white']"
+  >
     SOME<span class="text-purple-500">BRAND</span>HERE<span class="text-purple-500">.COM</span>
   </span>
 </template>
