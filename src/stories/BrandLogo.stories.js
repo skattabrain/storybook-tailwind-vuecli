@@ -16,7 +16,7 @@ export default {
   decorators: [
     templateDecorator,
   ],
-  title: 'Brand',
+  title: 'Components/Logo',
 };
 
 export const logo = () => ({

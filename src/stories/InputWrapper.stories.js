@@ -3,7 +3,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 
 export default {
   component: InputWrapper,
-  title: 'Input Wrapper',
+  title: 'Base/Input Wrapper',
 };
 
 export const Text = () => ({

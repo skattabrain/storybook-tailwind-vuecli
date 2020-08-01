@@ -14,10 +14,10 @@ export default {
   decorators: [
     templateDecorator,
   ],
-  title: 'Brand',
+  title: 'Base/Colors',
 };
 
-export const colorPalette = () => ({
+export const palette = () => ({
   data: () => ({
     colors: colorMap(),
   }),

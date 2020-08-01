@@ -9,13 +9,14 @@ const templateDecorator = () => ({
 
 
 export default {
+  layout: 'centered',
   decorators: [
     templateDecorator,
   ],
-  title: 'Headings',
+  title: 'Base/Headings',
 };
 
-export const Heading = () => ({
+export const Headings = () => ({
   props: {
     heading: {
       default: text('Heading Text', 'This is a heading')

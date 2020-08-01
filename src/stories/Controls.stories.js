@@ -6,7 +6,7 @@ const templateDecorator = () => ({
 
 export default {
 	decorators: [templateDecorator],
-	title: 'Controls',
+	title: 'Base/Controls',
 };
 
 export const textInput = () => ({
