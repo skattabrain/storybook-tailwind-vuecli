@@ -67,7 +67,7 @@ const componentWidthProvider = (Story, context) => {
         return componentWidthObservable.componentWidth
       }
     },
-    template: '<div class="h-screen flex flex-col justify-between"><div :class="componentWidth"><story /></div><ScreenSizeIndicator /></div>'
+    template: '<div class="h-screen"><div :class="componentWidth"><story /></div><ScreenSizeIndicator class="absolute bottom-0 right-1" /></div>'
   }
 }
 

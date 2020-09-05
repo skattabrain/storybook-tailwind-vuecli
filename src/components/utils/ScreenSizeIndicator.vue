@@ -1,5 +1,5 @@
 <template>
-  <div class="p-1 text-gray-400">
+  <div class="text-gray-400">
     <span class="inline-block mr-3 text-gray-900 sm:text-gray-400">
       <svg
         width="8.57142857142857"
