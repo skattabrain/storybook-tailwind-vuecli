@@ -1,4 +1,4 @@
-import LayoutNavigation from '@/components/LayoutNavigation.vue';
+import LayoutNavigation from '@/components/navigation.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 
 const templateDecorator = () => ({

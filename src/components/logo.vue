@@ -9,7 +9,6 @@
 
 <script>
 export default {
-  name: 'BrandLogo',
   props: {
     dark: {
       default: false,

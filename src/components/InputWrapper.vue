@@ -18,7 +18,6 @@
 
 <script>
 export default {
-  name: 'InputWrapper',
   props: {
     isDisabled: {
       default: false,

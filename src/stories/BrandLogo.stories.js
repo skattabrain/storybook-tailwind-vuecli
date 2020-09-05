@@ -1,4 +1,4 @@
-import BrandLogo from '@/components/BrandLogo.vue';
+import BrandLogo from '@/components/logo.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 import { boolean } from '@storybook/addon-knobs';
 
