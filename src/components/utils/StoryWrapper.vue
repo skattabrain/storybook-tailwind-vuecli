@@ -3,18 +3,12 @@
     <div :class="wrapperWidthClasses">
       <slot />
     </div>
-    <ScreenSizeIndicator />
   </div>
 </template>
 
 <script>
-import ScreenSizeIndicator from '@/components/utils/ScreenSizeIndicator.vue';
-
 export default {
   name: 'StoryWrapper',
-  components: {
-    ScreenSizeIndicator
-  },
   props: {
     wrapperWidthClasses: {
       default: 'w-1/2',
