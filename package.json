@@ -13,7 +13,6 @@
     "tailwind:build:purge": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css -purge"
   },
   "dependencies": {
-    "@tailwindcss/custom-forms": "^0.2.1",
     "core-js": "^3.6.5",
     "lodash": "^4.17.15",
     "tailwindcss": "^1.8.2",
