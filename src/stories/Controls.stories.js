@@ -9,7 +9,7 @@ export default {
     label: { control: 'text', name: 'Label' },
     helpText: { control: 'text', name: 'Help Text' },
     value: { control: 'text', name: 'Value' },
-    placeholder: { control: 'text', 'Placeholder' },
+    placeholder: { control: 'text', name: 'Placeholder' },
 	},
 	args: {
 		label: 'First Name',
