@@ -1,5 +1,7 @@
 // TODO - review/cleanup up this file as the needs of the addon-background has changed
-import tw from '../../tailwind.config';
+import uniformColorPalette from 'tailwindcss/lib/flagged/uniformColorPalette.js';
+
+const colorPalette = uniformColorPalette.theme.colors;
 
 function isObject(value) {
   return value && typeof value === 'object' && value.constructor === Object;
@@ -43,6 +45,6 @@ const colorMapperFlat = (colors) => {
   return newColors;
 };
 
-export const colorMapFlat = () => colorMapperFlat(colorMapper(tw.theme.colors));
+export const colorMapFlat = () => colorMapperFlat(colorMapper(colorPalette));
 
-export const colorMap = () => colorMapper(tw.theme.colors);
+export const colorMap = () => colorMapper(colorPalette);
