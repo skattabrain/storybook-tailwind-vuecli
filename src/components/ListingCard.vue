@@ -62,10 +62,6 @@ export default {
       default: null,
       type: String,
     },
-    description: {
-      default: null,
-      type: String,
-    },
     location: {
       default: null,
       type: String,

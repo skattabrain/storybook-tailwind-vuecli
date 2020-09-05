@@ -1,5 +1,3 @@
-import { text } from '@storybook/addon-knobs';
-
 const templateDecorator = () => ({
 	template: '<div class="max-w-sm"><story /></div>',
   });
@@ -7,21 +5,33 @@ const templateDecorator = () => ({
 export default {
 	decorators: [templateDecorator],
 	title: 'Base/Controls',
+	argTypes: {
+    label: { control: 'text', name: 'Label' },
+    helpText: { control: 'text', name: 'Help Text' },
+    value: { control: 'text', name: 'Value' },
+    placeholder: { control: 'text', 'Placeholder' },
+	},
+	args: {
+		label: 'First Name',
+		helpText: 'Look both ways before crossing the street',
+		value: 'Gregory',
+		placeholder: 'Type your name here',
+	}
 };
 
-export const textInput = () => ({
+export const textInput = (args) => ({
 	props: {
 		label: {
-			default: text('Label', 'First Name')
+			default: args.label,
 		},
 		helpText: {
-			default: text('Help Text', 'Look both ways before crossing the street')
+			default: args.helpText,
 		},
 		value: {
-			default: text('Value', 'Gregory')
+			default: args.value,
 		},
 		placeholder: {
-			default: text('Placeholder', 'Type your name here')
+			default: args.placeholder
 		},
 	},
   template: `

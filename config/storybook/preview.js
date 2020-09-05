@@ -15,3 +15,7 @@ addParameters({
     viewports: INITIAL_VIEWPORTS
   },
 })
+
+export const parameters = {
+  controls: { hideNoControlsWarning: true },
+}

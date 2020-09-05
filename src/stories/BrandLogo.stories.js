@@ -1,6 +1,5 @@
 import BrandLogo from '@/components/Logo.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
-import { boolean } from '@storybook/addon-knobs';
 
 const templateDecorator = () => ({
   components: { StoryWrapper },
@@ -17,14 +16,20 @@ export default {
     templateDecorator,
   ],
   title: 'Components/Logo',
+  argTypes: {
+    dark: { control: 'boolean', name: 'Is Dark?' },
+  },
+  args: {
+    dark: false
+  }
 };
 
-export const logo = () => ({
+export const logo = (args) => ({
   components: { BrandLogo },
   props: {
-    isDark: {
-      default: boolean('Dark', false)
+    dark: {
+      default: args.dark
     }
   },
-  template: '<brand-logo :dark="isDark" />'
+  template: '<brand-logo :dark="dark" />'
 });
