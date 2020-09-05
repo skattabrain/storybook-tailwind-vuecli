@@ -26,17 +26,17 @@ export const Text = () => ({
     }
   },
   template: `
-<div class="w-screen md:w-screen-75 px-6 md:px-0">
+<div class="p-6">
   <input-wrapper v-if="showWithFriends" class="mb-12" :is-disabled="disabled" label="First Name" help="First name">
-    <input :disabled="disabled" class="form-input w-full" type="text" placheolder="John">
+    <input :disabled="disabled" class="w-full" type="text" placheolder="John">
   </input-wrapper>
 
   <input-wrapper :is-disabled="disabled" :error="error" :label="label" :help="help">
-    <input :disabled="disabled" class="form-input w-full" type="text" placheolder="Doe">
+    <input :disabled="disabled" class="w-full" type="text" placheolder="Doe">
   </input-wrapper>
 
   <input-wrapper v-if="showWithFriends" class="mt-12" label="Email">
-    <input :disabled="disabled" class="form-input w-full" type="text" placheolder="Some other value">
+    <input :disabled="disabled" class="w-full" type="text" placheolder="Some other value">
   </input-wrapper>
 </div>
 `

@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import BrandLogo from '@/components/logo.vue';
+import BrandLogo from '@/components/Logo.vue';
 
 export default {
   components: {
