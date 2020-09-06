@@ -1,6 +1,9 @@
 <template>
-  <label class="block">
-    <div class="mb-2">
+  <label
+    class="block"
+    :class="marginClass"
+  >
+    <div class="mb-1">
       <div
         class="font-bold"
         :class="labelColor"
@@ -63,6 +66,10 @@ export default {
       default: null,
       type: String,
     },
+    marginClass: {
+      default: 'mb-4',
+      type: String
+    }
   },
   data() {
     return {

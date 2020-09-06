@@ -55,17 +55,19 @@ export const Text = (args) => ({
   },
   template: `
 <div>
-  <input-wrapper v-if="showWithOtherControls" class="mb-4" :is-disabled="disabled" label="First Name" help="If you do not know your first name, please seek professional help.">
+  <input-wrapper v-if="showWithOtherControls" :is-disabled="disabled" label="First Name" help="If you do not know your first name, please seek professional help.">
     <input class="form-input w-full" type="text" placeholder="John">
   </input-wrapper>
 
-  <input-wrapper class="mb-4" :is-disabled="disabled" :error="errorMessage" :label="label" :help="help" :optional="optional">
+  <input-wrapper :is-disabled="disabled" :error="errorMessage" :label="label" :help="help" :optional="optional">
     <input :disabled="disabled" class="form-input w-full" type="text" placeholder="Doe">
   </input-wrapper>
 
-  <input-wrapper v-if="showWithOtherControls" class="mb-4" label="Email" help="So we can SPAM the shit out of you.">
+  <input-wrapper v-if="showWithOtherControls" label="Email" help="So we can SPAM the shit out of you.">
     <input class="form-input w-full" type="text" placeholder="johndoe@example.com">
   </input-wrapper>
+
+  <button type="button" class="btn">Submit</button>
 </div>
 `
 });
