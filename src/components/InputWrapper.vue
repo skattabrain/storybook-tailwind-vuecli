@@ -39,6 +39,6 @@ export default {
       default: null,
       type: String,
     },
-  },
+  }
 };
 </script>
