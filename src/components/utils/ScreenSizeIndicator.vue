@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute bottom-0 right-0 text-gray-400 m-1 p-1 rounded bg-gray-800 bg-opacity-50">
+  <div class="fixed bottom-0 right-0 text-gray-400 m-1 p-1 rounded bg-gray-800 bg-opacity-50">
     <span class="indicator mr-2 text-white sm:text-gray-400">
       <phoneIcon />
       <div class="indicator-label">all</div>
