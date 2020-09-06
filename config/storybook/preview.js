@@ -7,6 +7,37 @@ import Vue from 'vue'
 import ScreenSizeIndicator from '@/components/utils/ScreenSizeIndicator.vue';
 require('typeface-open-sans')
 
+const componentPaddings = [
+  {
+    value: 'p-0',
+    title: 'No Padding'
+  },
+  {
+    value: 'p-1',
+    title: '.25rem'
+  },
+  {
+    value: 'p-2',
+    title: '.5rem'
+  },
+  {
+    value: 'p-3',
+    title: '.75rem'
+  },
+  {
+    value: 'p-4',
+    title: '1rem'
+  },
+  {
+    value: 'p-5',
+    title: '1.25rem'
+  },
+  {
+    value: 'p-6',
+    title: '1.5rem'
+  },
+]
+
 const componentWidths = [
   {
     value: 'w-1/4',
@@ -35,7 +66,16 @@ export const globalTypes = {
       icon: 'arrowrightalt',
       items: componentWidths
     }
-  }
+  },
+  componentPadding: {
+    name: 'Component Padding',
+    description: 'Set a padding for the component to render in',
+    defaultValue: 'p-0',
+    toolbar: {
+      icon: 'component',
+      items: componentPaddings
+    }
+  },
 }
 
 addParameters({
@@ -53,8 +93,21 @@ export const parameters = {
   controls: { hideNoControlsWarning: true },
 }
 
-const componentWidthObservable = Vue.observable({ componentWidth: null });
+const componentPaddingObservable = Vue.observable({ componentPadding: null });
+const componentPaddingProvider = (Story, context) => {
+  componentPaddingObservable.componentPadding = context.globals.componentPadding
 
+  return {
+    computed: {
+      componentPadding: () => {
+        return componentPaddingObservable.componentPadding
+      }
+    },
+    template: '<div :class="componentPadding"><story /></div>'
+  }
+}
+
+const componentWidthObservable = Vue.observable({ componentWidth: null });
 const componentWidthProvider = (Story, context) => {
   componentWidthObservable.componentWidth = context.globals.componentWidth
 
@@ -67,8 +120,8 @@ const componentWidthProvider = (Story, context) => {
         return componentWidthObservable.componentWidth
       }
     },
-    template: '<div class="h-screen"><div :class="componentWidth"><story /></div><ScreenSizeIndicator /></div>'
+    template: '<div><div :class="componentWidth"><story /></div><ScreenSizeIndicator /></div>'
   }
 }
 
-export const decorators = [ componentWidthProvider ]
+export const decorators = [ componentWidthProvider, componentPaddingProvider ]

@@ -1,13 +1,8 @@
 import listing from '@/mocks/listing';
 import ListingCard from '@/components/ListingCard.vue';
-import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 
 const templateDecorator = () => ({
-  components: { StoryWrapper },
-  data: () => ({
-    wrapperWidthClasses: 'w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4',
-  }),
-  template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
+  template: '<div class="max-w-xs"><story /></div>',
 });
 
 
