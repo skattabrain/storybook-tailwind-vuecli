@@ -1,5 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: (process.argv.includes('-purge')),
+    content: [
+      './src/**/*.stories.js',
+      './src/**/*.vue',
+    ]
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -23,6 +29,9 @@ module.exports = {
     }
   },
   variants: {},
+  plugins: [
+    require('./src/styles/plugins/typography'),
+  ],
   experimental: {
     uniformColorPalette: true,
     extendedSpacingScale: true,
