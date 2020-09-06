@@ -62,5 +62,10 @@ export const Default = (args) => ({
       default: args.url,
     },
   },
+  data() {
+    return {
+      id: listing.id
+    }
+  },
   template: '<listing-card :id="id" :url="url" :location="location" :stock-number="stockNumber" :title="title" :price="price" :miles="miles" :dealer="dealer" :image-url="imageUrl" />',
 });
