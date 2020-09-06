@@ -1,12 +1,7 @@
 import BrandLogo from '@/components/Logo.vue';
-import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 
 const templateDecorator = () => ({
-  components: { StoryWrapper },
-  data: () => ({
-    wrapperWidthClasses: 'text-4xl',
-  }),
-  template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
+  template: '<div class="text-3xl"><story /></div>',
 });
 
 
