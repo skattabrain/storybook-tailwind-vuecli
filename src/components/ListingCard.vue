@@ -22,7 +22,7 @@
         </a>
       </h3>
       <div class="flex flex-row items-center">
-        <div class="flex-1 font-bold text-green-500 text-xl my-2">
+        <div class="flex-1 font-bold text-green-400 text-xl my-2">
           <span class="align-text-top text-sm">$</span>{{ price | numberFilter }}
         </div>
         <div class="font-medium text-gray-700 text-sm">
