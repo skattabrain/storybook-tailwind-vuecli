@@ -7,6 +7,10 @@
 		{
 			"name": "TailwindCSS",
 			"path": "node_modules/tailwindcss/lib"
+		},
+		{
+			"name": "Tailwind Labs",
+			"path": "node_modules/@tailwindcss"
 		}
 	],
 	"settings": {}

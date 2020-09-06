@@ -18,8 +18,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          '"Cooper Hewitt"', // Experimenting with this
           '"Open Sans"',
+          '"Nunito Sans"',
+          '"Source Sans Pro"',
+          'Lato',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -40,7 +42,9 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/custom-forms'),
+    require('./src/styles/plugins/fonts'),
     require('./src/styles/plugins/typography'),
+    require('./src/styles/plugins/buttons'),
   ],
   experimental: {
     uniformColorPalette: true,

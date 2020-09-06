@@ -6,7 +6,42 @@ import { colorMapFlat } from '../../src/utils/colors.js'
 import Vue from 'vue'
 import ScreenSizeIndicator from '@/components/utils/ScreenSizeIndicator.vue';
 require('typeface-open-sans')
-require('typeface-cooper-hewitt')
+require('typeface-nunito-sans')
+require('typeface-noto-sans')
+require('typeface-source-sans-pro')
+require('typeface-roboto')
+require('typeface-lato')
+
+const fontSelections = [
+  {
+    value: '',
+    title: 'Default Stack'
+  },
+  {
+    value: 'font-nunito-sans',
+    title: 'Nunito Sans'
+  },
+  {
+    value: 'font-noto-sans',
+    title: 'Noto Sans'
+  },
+  {
+    value: 'font-open-sans',
+    title: 'Open Sans'
+  },
+  {
+    value: 'font-source-sans-pro',
+    title: 'Source Sans Pro'
+  },
+  {
+    value: 'font-roboto',
+    title: 'Roboto'
+  },
+  {
+    value: 'font-lato',
+    title: 'Lato'
+  },
+]
 
 const componentPaddings = [
   {
@@ -59,6 +94,15 @@ const componentWidths = [
 ]
 
 export const globalTypes = {
+  fontSelection: {
+    name: 'Font Selection',
+    description: 'Set a font for the component to render in',
+    defaultValue: '',
+    toolbar: {
+      icon: 'paragraph',
+      items: fontSelections
+    }
+  },
   componentWidth: {
     name: 'Component Width',
     description: 'Set a width for the component to render in',
@@ -94,6 +138,20 @@ export const parameters = {
   controls: { hideNoControlsWarning: true },
 }
 
+const fontSelectionObservable = Vue.observable({ fontSelection: null });
+const fontSelectionProvider = (Story, context) => {
+  fontSelectionObservable.fontSelection = context.globals.fontSelection
+
+  return {
+    computed: {
+      fontSelection: () => {
+        return fontSelectionObservable.fontSelection
+      }
+    },
+    template: '<div :class="fontSelection"><story /></div>'
+  }
+}
+
 const componentPaddingObservable = Vue.observable({ componentPadding: null });
 const componentPaddingProvider = (Story, context) => {
   componentPaddingObservable.componentPadding = context.globals.componentPadding
@@ -125,4 +183,4 @@ const componentWidthProvider = (Story, context) => {
   }
 }
 
-export const decorators = [ componentWidthProvider, componentPaddingProvider ]
+export const decorators = [ fontSelectionProvider, componentWidthProvider, componentPaddingProvider ]
