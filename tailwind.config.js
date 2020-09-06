@@ -1,8 +1,9 @@
+let purgeEnabled = (process.env.NODE_ENV === 'production' && !process.argv.includes('config/storybook'))
+
 module.exports = {
   purge: {
-    enabled: (process.argv.includes('-purge')),
+    enabled: purgeEnabled,
     content: [
-      './src/**/*.stories.js',
       './src/**/*.vue',
     ]
   },
@@ -10,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          '"Cooper Hewitt"', // Experimenting with this
           '"Open Sans"',
           'system-ui',
           '-apple-system',

@@ -10,13 +10,14 @@
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "tailwind:build": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css",
-    "tailwind:build:purge": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css -purge"
+    "tailwind:build:purge": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css"
   },
   "dependencies": {
     "bootstrap-icons": "^1.0.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "tailwindcss": "^1.8.3",
+    "typeface-cooper-hewitt": "^0.0.44",
     "typeface-open-sans": "^0.0.75",
     "vue": "^2.6.12",
     "vue-router": "^3.4.3",

@@ -1,11 +1,12 @@
 import './storybook.css'
-import '../../src/styles.css'
+import '../../src/styles/index.css'
 import { addParameters } from '@storybook/vue'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { colorMapFlat } from '../../src/utils/colors.js'
 import Vue from 'vue'
 import ScreenSizeIndicator from '@/components/utils/ScreenSizeIndicator.vue';
 require('typeface-open-sans')
+require('typeface-cooper-hewitt')
 
 const componentPaddings = [
   {

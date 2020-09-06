@@ -12,4 +12,4 @@
   </div>
 </template>
 
-<style src="./styles.css">
+<style src="./styles/index.css">
