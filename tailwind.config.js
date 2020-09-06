@@ -8,6 +8,13 @@ module.exports = {
     ]
   },
   theme: {
+    customForms: (theme) => ({
+      default: {
+        input: {
+          borderRadius: theme('borderRadius.none')
+        }
+      },
+    }),
     extend: {
       fontFamily: {
         sans: [
@@ -32,6 +39,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
+    require('@tailwindcss/custom-forms'),
     require('./src/styles/plugins/typography'),
   ],
   experimental: {

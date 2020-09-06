@@ -2,14 +2,11 @@
   <label class="block">
     <div class="mb-2">
       <div
-        class="font-bold inline-flex items-center"
+        class="font-bold"
         :class="labelColor"
       >
-        <ExclamationTriangleFill
-          v-if="error"
-          class="mr-1"
-        />
-        {{ label }} <span
+        {{ label }}
+        <span
           v-if="optional"
           class="font-normal ml-2"
         >(Optional)</span>
@@ -17,9 +14,13 @@
 
       <div
         v-if="error"
-        class="text-red-500 font-normal text-sm"
+        class="flex items-center text-red-500 font-normal text-sm"
         :class="ERROR_COLOR"
-      >{{ error }}</div>
+      >
+        <ExclamationTriangleFill
+          v-if="error"
+          class="mr-1"
+        /> <span>{{ error }}</span></div>
 
       <div
         v-if="help"
