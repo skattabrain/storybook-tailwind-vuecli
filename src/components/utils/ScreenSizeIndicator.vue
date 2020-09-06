@@ -1,24 +1,24 @@
 <template>
   <div class="absolute bottom-0 right-0 text-gray-300 m-1 p-1 rounded bg-gray-800 bg-opacity-50">
-    <span class="inline-block mr-2 text-gray-100 sm:text-gray-300">
+    <span class="indicator mr-2 text-gray-100 sm:text-gray-300">
       <phoneIcon />
-      <div class="mt-1 text-xs text-center">all</div>
+      <div class="indicator-label">all</div>
     </span>
-    <span class="inline-block mr-2 sm:text-gray-100 md:text-gray-300">
+    <span class="indicator mr-2 sm:text-gray-100 md:text-gray-300">
       <phoneLandscapeIcon />
-      <div class="mt-1 text-xs text-center">sm</div>
+      <div class="indicator-label">sm</div>
     </span>
-    <span class="inline-block mr-2 md:text-gray-100 lg:text-gray-300">
+    <span class="indicator mr-2 md:text-gray-100 lg:text-gray-300">
       <tabletLandscapeIcon />
-      <div class="mt-1 text-xs text-center">md</div>
+      <div class="indicator-label">md</div>
     </span>
-    <span class="inline-block mr-2 lg:text-gray-100 xl:text-gray-300">
+    <span class="indicator mr-2 lg:text-gray-100 xl:text-gray-300">
       <laptopIcon />
-      <div class="mt-1 text-xs text-center">lg</div>
+      <div class="indicator-label">lg</div>
     </span>
-    <span class="inline-block xl:text-gray-100">
+    <span class="indicator xl:text-gray-100">
       <displayIcon />
-      <div class="mt-1 text-xs text-center">xl</div>
+      <div class="indicator-label">xl</div>
     </span>
   </div>
 </template>
@@ -41,3 +41,12 @@ export default {
   }
 };
 </script>
+
+<style lang="css" scoped>
+  .indicator {
+    display: inline-block;
+  }
+  .indicator-label {
+    @apply mt-1 text-xs text-center;
+  }
+</style>
