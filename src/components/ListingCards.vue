@@ -3,8 +3,7 @@
     <div
       v-for="listing in listings"
       :key="listing.id"
-      class="flex w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3 mb-6"
-    >
+      class="flex w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3 mb-6">
       <listing-card
         :id="listing.id"
         :url="listing.url"
@@ -15,8 +14,7 @@
         :miles="listing.miles"
         :dealer="listing.dealer"
         :description="listing.description"
-        :image-url="listing.image"
-      />
+        :image-url="listing.image" />
     </div>
   </div>
 </template>

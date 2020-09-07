@@ -5,8 +5,7 @@
          class="inline-block py-2 px-3 -ml-3">
         <brand-logo />
       </a>
-      <ul v-if="items"
-          class="inline-flex">
+      <ul v-if="items" class="inline-flex">
         <li v-for="item in items"
             :key="item.label"
             class="mr-2">

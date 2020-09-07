@@ -20,7 +20,7 @@ module.exports = {
     'no-debugger': 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'vue/max-attributes-per-line': ['error', {
-      'singleline': 1,
+      'singleline': 2,
       'multiline': {
         'max': 1,
         'allowFirstLine': true

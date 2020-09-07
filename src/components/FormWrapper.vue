@@ -1,16 +1,12 @@
 <template>
   <form>
-    <AlertBox
-      :message="errorMessage"
-      @alert-dismissed="clearErrorMessage"
-    />
+    <AlertBox :message="errorMessage"
+              @alert-dismissed="clearErrorMessage" />
     <slot />
 
-    <button
-      type="submit"
-      class="btn w-full mt-4"
-      @click.prevent="submitForm"
-    >
+    <button type="submit"
+            class="btn w-full mt-4"
+            @click.prevent="submitForm">
       Submit
     </button>
   </form>

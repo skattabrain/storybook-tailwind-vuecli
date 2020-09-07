@@ -1,34 +1,28 @@
 <template>
   <label
     class="block"
-    :class="marginClass"
-  >
+    :class="marginClass">
     <div class="mb-1">
       <div
         class="font-bold"
-        :class="labelColor"
-      >
+        :class="labelColor">
         {{ label }}
         <span
           v-if="optional"
-          class="font-normal ml-2"
-        >(Optional)</span>
+          class="font-normal ml-2">(Optional)</span>
       </div>
 
       <div
         v-if="error"
         class="flex items-center text-red-500 font-normal text-sm"
-        :class="ERROR_COLOR"
-      >
+        :class="ERROR_COLOR">
         <ExclamationTriangleFill
           v-if="error"
-          class="mr-1"
-        /> <span>{{ error }}</span></div>
+          class="mr-1" /> <span>{{ error }}</span></div>
 
       <div
         v-if="help"
-        class="text-gray-600 text-sm"
-      >{{ help }}</div>
+        class="text-gray-600 text-sm">{{ help }}</div>
 
 
     </div>

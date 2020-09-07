@@ -3,17 +3,14 @@
     <div
       v-if="message"
       class="p-3 flex mb-4"
-      :class="alertClass"
-    >
+      :class="alertClass">
       <ErrorIcon
         v-if="variant === 'error'"
-        class="self-center text-base mr-2"
-      />
+        class="self-center text-base mr-2" />
       <span>{{ message }}
         <button
           class="ml-2 underline"
-          @click.prevent="dismiss"
-        >Dismiss</button>
+          @click.prevent="dismiss">Dismiss</button>
       </span>
     </div>
   </transition>
