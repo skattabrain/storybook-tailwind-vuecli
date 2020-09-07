@@ -67,7 +67,7 @@ export const Text = (args) => ({
     <input class="form-input w-full" type="text" placeholder="johndoe@example.com">
   </input-wrapper>
 
-  <button type="button" class="btn">Submit</button>
+  <button type="button" class="btn mt-4 w-full">Submit</button>
 </div>
 `
 });
