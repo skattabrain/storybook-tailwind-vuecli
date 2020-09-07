@@ -11,6 +11,7 @@ require('typeface-noto-sans')
 require('typeface-source-sans-pro')
 require('typeface-roboto')
 require('typeface-lato')
+require('typeface-quattrocento')
 
 const fontSelections = [
   {
@@ -40,6 +41,10 @@ const fontSelections = [
   {
     value: 'font-lato',
     title: 'Lato'
+  },
+  {
+    value: 'font-quattrocento',
+    title: 'Quattrocento'
   },
 ]
 
