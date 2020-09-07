@@ -37,7 +37,19 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-      }
+      },
+      rotate: {
+        '-15': '-15deg',
+        '-10': '-10deg',
+        '-5': '-5deg',
+        '-2.5': '-2.5deg',
+        '-1.5': '-1.5deg',
+        '1.5': '1.5deg',
+        '2.5': '2.5deg',
+        '5': '5deg',
+        '10': '10deg',
+        '15': '15deg',
+      },
     }
   },
   variants: {},
