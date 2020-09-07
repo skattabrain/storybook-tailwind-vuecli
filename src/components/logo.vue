@@ -1,10 +1,6 @@
 <template>
-  <span
-    class="brand-logo"
-    :class="[dark ? 'text-dark' : 'text-white']"
-  >
-    SOME<span class="text-purple-500">BRAND</span>HERE<span class="text-purple-500">.COM</span>
-  </span>
+  <span class="brand-logo"
+        :class="[dark ? 'text-dark' : 'text-white']">{{ brandName }}</span>
 </template>
 
 <script>
@@ -15,12 +11,17 @@ export default {
       type: Boolean
     },
   },
+  data() {
+    return {
+      brandName: 'WeSellLimos'
+    }
+  }
 };
 </script>
 
 <style lang="css" scoped>
-  .brand-logo {
+  /* .brand-logo {
     font-weight: 800;
     font-family: "Open Sans", sans-serif;
-  }
+  } */
 </style>
