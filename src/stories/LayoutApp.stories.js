@@ -2,7 +2,7 @@ import LayoutApp from '@/components/LayoutApp.vue';
 
 export default {
   component: LayoutApp,
-  title: 'Examples/Layout',
+  title: 'Layout/App',
 };
 
 export const app = () => ({
