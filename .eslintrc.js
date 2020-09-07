@@ -19,6 +19,17 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    'vue/max-attributes-per-line': ['error', {
+      'singleline': 1,
+      'multiline': {
+        'max': 1,
+        'allowFirstLine': true
+      }
+    }],
+    'vue/html-closing-bracket-newline': ['error', {
+      'singleline': 'never',
+      'multiline': 'never'
+    }]
   },
 
   overrides: [
