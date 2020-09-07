@@ -3,6 +3,7 @@ let purgeEnabled = (process.env.NODE_ENV === 'production' && !process.argv.inclu
 module.exports = {
   purge: {
     enabled: purgeEnabled,
+    preserveHtmlElements: true,
     content: [
       './src/**/*.vue',
     ]
