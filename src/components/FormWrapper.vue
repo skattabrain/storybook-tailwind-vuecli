@@ -7,7 +7,7 @@
     <button type="submit"
             class="btn w-full mt-4"
             @click.prevent="submitForm">
-      Submit
+      <span>{{ submitLabel }}</span>
     </button>
   </form>
 </template>
@@ -20,6 +20,10 @@ export default {
     AlertBox,
   },
   props: {
+    submitLabel: {
+      default: 'Submit',
+      type: String
+    },
     errorMessage: {
       default: null,
       type: String

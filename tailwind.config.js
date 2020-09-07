@@ -55,8 +55,8 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/custom-forms'),
+    require('./src/styles/plugins/base'),
     require('./src/styles/plugins/fonts'),
-    require('./src/styles/plugins/typography'),
     require('./src/styles/plugins/buttons'),
   ],
   experimental: {

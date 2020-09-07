@@ -1,7 +1,6 @@
+import navItems from '@/mocks/navigation';
 import LayoutApp from '@/components/LayoutApp'
 import Login from '@/components/forms/Login'
-
-// const FormWrapper = Login().template
 
 export default {
   component: LayoutApp,
@@ -12,23 +11,7 @@ export const Empty = () => ({
   components: { LayoutApp },
   data: () => ({
     heading: 'Dashboard',
-    navItems: [
-      {
-        label: 'Listings',
-        url: '#',
-        active: true
-      },
-      {
-        label: 'Inquires',
-        url: '#',
-        active: false
-      },
-      {
-        label: 'Invoices',
-        url: '#',
-        active: false
-      },
-    ]
+    navItems
   }),
   template: `
 <layout-app :heading="heading" :nav-items="navItems">
@@ -41,23 +24,7 @@ export const LoginForm = () => ({
   components: { Login, LayoutApp },
   data: () => ({
     heading: 'Dashboard',
-    navItems: [
-      {
-        label: 'Listings',
-        url: '#',
-        active: true
-      },
-      {
-        label: 'Inquires',
-        url: '#',
-        active: false
-      },
-      {
-        label: 'Invoices',
-        url: '#',
-        active: false
-      },
-    ]
+    navItems
   }),
   template: `
 <layout-app :heading="heading" :nav-items="navItems">

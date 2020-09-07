@@ -1,19 +1,17 @@
 <template>
-  <div class="flex flex-col min-h-screen w-screen">
-    <layout-navigation :items="navItems" />
-    <layout-main class="flex-grow">
+  <div class="app grid h-screen w-screen bg-gray-100" :class="{ 'app-simple' : !showNavigation }">
+    <layout-navigation v-if="showNavigation" :items="navItems" />
+    <div class="main-content overflow-y-auto">
       <slot />
-    </layout-main>
+    </div>
   </div>
 </template>
 
 <script>
-import LayoutMain from '@/components/LayoutMain.vue';
 import LayoutNavigation from '@/components/Navigation.vue';
 
 export default {
   components: {
-    LayoutMain,
     LayoutNavigation
   },
   props: {
@@ -28,7 +26,21 @@ export default {
   },
   data: () => ({
     open: false
-  })
-
+  }),
+  computed: {
+    showNavigation() {
+      return true
+    }
+  }
 };
 </script>
+
+<style lang="css" scoped>
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .app.app-simple {
+    grid-template-rows: 1fr;
+  }
+</style>

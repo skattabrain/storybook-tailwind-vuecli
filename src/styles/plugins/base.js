@@ -8,6 +8,9 @@ module.exports = function ({ addBase, config }) {
       fontSize: config('theme.fontSize.base')[0],
       fontWeight: config('theme.fontWeight.normal'),
     },
+    'body': {
+      overflow: 'hidden',
+    },
     'code': {
       fontFamily: config('theme.fontFamily.mono')
     }

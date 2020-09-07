@@ -1,29 +1,19 @@
 <template>
-  <div class="">
-    <div class="container py-2">
+  <div class="main-nav">
+    <div class="">
       <a href="#"
          class="inline-block py-2 px-3 -ml-3">
-        <brand-logo />
+        <brand-logo :dark="true" />
       </a>
       <ul v-if="items" class="inline-flex">
         <li v-for="item in items"
             :key="item.label"
             class="mr-2">
-          <a class="inline-block py-2 px-3"
+          <a class="py-2 px-3"
              :href="item.url">
             {{ item.label }}</a>
         </li>
       </ul>
-      <!-- <ul v-if="items" class="flex">
-        <li v-for="item in items"
-          :key="item.label"
-          class="mr-3">
-          <a :href="item.url"
-            class="text-gray-100 hover:bg-gray-800 p-3">
-            {{ item.label }}
-          </a>
-        </li>
-      </ul> -->
     </div>
   </div>
 </template>
