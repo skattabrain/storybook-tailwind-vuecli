@@ -1,5 +1,4 @@
 module.exports = function ({ addComponents, config }) {
-  console.log('fontSiz', config('theme.fontSize'))
   addComponents({
     '.btn': {
       display: 'inline-flex',
