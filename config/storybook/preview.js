@@ -50,7 +50,7 @@ const fontSelections = [
 
 const componentPaddings = [
   {
-    value: 'p-0',
+    value: '',
     title: 'No Padding'
   },
   {
@@ -77,25 +77,34 @@ const componentPaddings = [
     value: 'p-6',
     title: '1.5rem'
   },
+  {
+    value: 'p-7',
+    title: '1.75rem'
+  },
+  {
+    value: 'p-8',
+    title: '2rem'
+  },
 ]
 
 const componentWidths = [
   {
-    value: 'w-1/4',
-    title: '25% Width'
-  },
-  {
-    value: 'w-2/4',
-    title: '50% Width'
+    value: 'w-full',
+    title: '100% Width'
   },
   {
     value: 'w-3/4',
     title: '75% Width'
   },
   {
-    value: 'w-full',
-    title: '100% Width'
+    value: 'w-2/4',
+    title: '50% Width'
   },
+  {
+    value: 'w-1/4',
+    title: '25% Width'
+  },
+
 ]
 
 export const globalTypes = {
@@ -120,7 +129,7 @@ export const globalTypes = {
   componentPadding: {
     name: 'Component Padding',
     description: 'Set a padding for the component to render in',
-    defaultValue: 'p-0',
+    defaultValue: '',
     toolbar: {
       icon: 'component',
       items: componentPaddings
