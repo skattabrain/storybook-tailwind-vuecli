@@ -1,26 +1,29 @@
 <template>
-  <div
-    v-if="development"
-    class="fixed bottom-0 right-0 text-gray-400 m-1 p-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-75">
-    <span class="indicator mr-2 text-white sm:text-gray-400">
+  <div v-if="development"
+       class="group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-75">
+    <span class="inline-block sm:hidden group-hover:inline-block mx-1 text-white sm:text-gray-400">
       <phoneIcon />
       <div class="indicator-label">all</div>
     </span>
-    <span class="indicator mr-2 sm:text-white md:text-gray-400">
+    <span class="hidden sm:inline-block md:hidden group-hover:inline-block mx-1 sm:text-white md:text-gray-400">
       <phoneLandscapeIcon />
       <div class="indicator-label">sm</div>
     </span>
-    <span class="indicator mr-2 md:text-white lg:text-gray-400">
+    <span class="hidden md:inline-block lg:hidden group-hover:inline-block mx-1 md:text-white lg:text-gray-400">
       <tabletLandscapeIcon />
       <div class="indicator-label">md</div>
     </span>
-    <span class="indicator mr-2 lg:text-white xl:text-gray-400">
+    <span class="hidden lg:inline-block xl:hidden group-hover:inline-block mx-1 lg:text-white xl:text-gray-400">
       <laptopIcon />
       <div class="indicator-label">lg</div>
     </span>
-    <span class="indicator xl:text-white">
+    <span class="hidden xl:inline-block xxl:hidden group-hover:inline-block mx-1 xl:text-white xxl:text-gray-400">
       <displayIcon />
       <div class="indicator-label">xl</div>
+    </span>
+    <span class="hidden xxl:inline-block group-hover:inline-block xxl:text-white mx-1">
+      <tvIcon />
+      <div class="indicator-label">xxl</div>
     </span>
   </div>
 </template>
@@ -31,6 +34,7 @@ import laptopIcon from 'bootstrap-icons/icons/laptop.svg?inline';
 import phoneIcon from 'bootstrap-icons/icons/phone.svg?inline';
 import phoneLandscapeIcon from 'bootstrap-icons/icons/phone-landscape.svg?inline';
 import tabletLandscapeIcon from 'bootstrap-icons/icons/tablet-landscape.svg?inline';
+import tvIcon from 'bootstrap-icons/icons/tv.svg?inline';
 
 export default {
   name: 'ScreenSizeIndicator',
@@ -40,6 +44,7 @@ export default {
     phoneIcon,
     phoneLandscapeIcon,
     tabletLandscapeIcon,
+    tvIcon
   },
   data() {
     return {
@@ -50,9 +55,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  .indicator {
-    display: inline-block;
-  }
   .indicator-label {
     @apply mt-1 text-xs text-center;
   }
