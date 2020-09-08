@@ -53,7 +53,7 @@ export default {
       this.working = true
 
       setTimeout(() => {
-        this.errorMessage = 'Houston we have a problem'
+        this.errorMessage = 'Houston we have a problem!'
         this.working = false
       }, 1000);
     }
