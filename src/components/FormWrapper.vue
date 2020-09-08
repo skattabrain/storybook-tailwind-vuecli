@@ -9,7 +9,7 @@
             class="btn w-full mt-4"
             @click.prevent="submitForm">
       <div class="absolute transition-opacity duration-100 opacity-0" :class="{ 'opacity-100' : working }">
-        <GearFill class="animate-spin-slower" />
+        <WorkingIcon class="animate-spin-slower" />
       </div>
       <div class="transition-opacity duration-100" :class="{ 'opacity-0' : working }">
         {{ submitLabel }}
@@ -20,12 +20,12 @@
 
 <script>
 import AlertBox from '@/components/Alert.vue';
-import GearFill from 'bootstrap-icons/icons/gear.svg?inline';
+import WorkingIcon from 'bootstrap-icons/icons/gear-fill.svg?inline';
 
 export default {
   components: {
     AlertBox,
-    GearFill
+    WorkingIcon
   },
   props: {
     submitLabel: {

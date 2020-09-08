@@ -55,7 +55,7 @@ export default {
       setTimeout(() => {
         this.errorMessage = 'Houston we have a problem'
         this.working = false
-      }, 100);
+      }, 1000);
     }
   }
 }
