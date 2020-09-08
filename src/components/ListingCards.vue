@@ -3,7 +3,7 @@
     <div
       v-for="listing in listings"
       :key="listing.id"
-      class="flex w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3 mb-6">
+      class="flex w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 xxl:w-1/6 px-3 mb-6">
       <listing-card
         :id="listing.id"
         :url="listing.url"

@@ -17,6 +17,10 @@ module.exports = {
       },
     }),
     extend: {
+      screens: {
+        xxl: '1440px',
+        hd: '1920px',
+      },
       fontFamily: {
         sans: [
           '"Open Sans"',
@@ -56,7 +60,9 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    display: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   plugins: [
     require('@tailwindcss/custom-forms'),
     require('./src/styles/plugins/base'),
