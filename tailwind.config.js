@@ -50,6 +50,10 @@ module.exports = {
         '10': '10deg',
         '15': '15deg',
       },
+      animation: {
+        'spin-slower': 'spin 1.5s linear infinite',
+        'spin-slow': 'spin 2s linear infinite',
+      }
     }
   },
   variants: {},

@@ -1,6 +1,7 @@
 <template>
   <FormWrapper class="p-4"
                :error-message="errorMessage"
+               :working="working"
                @submit-form="onSubmit"
                @clear-error="clearError">
     <InputWrapper label="Username">
@@ -40,7 +41,21 @@ export default {
     return {
       username: null,
       password: null,
-      errorMessage: null
+      errorMessage: null,
+      working: false
+    }
+  },
+  methods: {
+    clearError() {
+      this.errorMessage = null
+    },
+    onSubmit() {
+      this.working = true
+
+      setTimeout(() => {
+        this.errorMessage = 'Houston we have a problem'
+        this.working = false
+      }, 100);
     }
   }
 }
