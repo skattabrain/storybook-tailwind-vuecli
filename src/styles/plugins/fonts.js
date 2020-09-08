@@ -18,5 +18,8 @@ module.exports = function ({ addUtilities }) {
     '.font-lato': {
       fontFamily: 'Lato'
     },
+    '.font-quattrocento': {
+      fontFamily: 'Quattrocento'
+    },
   })
 }
