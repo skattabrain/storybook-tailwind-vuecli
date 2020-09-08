@@ -14,7 +14,7 @@ export default {
   },
   args: {
     disabled: false,
-    showWithOtherControls: false,
+    showWithOtherControls: true,
     showError: false,
     help: 'Enter your last name here. If this is a problem, sorry but we can\'t help you.',
     label: 'Last Name',
@@ -55,15 +55,15 @@ export const Text = (args) => ({
   },
   template: `
 <div>
-  <input-wrapper v-if="showWithOtherControls" :is-disabled="disabled" label="First Name" help="If you do not know your first name, please seek professional help.">
+  <input-wrapper class="mb-4" v-if="showWithOtherControls" :is-disabled="disabled" label="First Name" help="If you do not know your first name, please seek professional help.">
     <input class="form-input w-full" type="text" placeholder="John">
   </input-wrapper>
 
-  <input-wrapper :is-disabled="disabled" :error="errorMessage" :label="label" :help="help" :optional="optional">
+  <input-wrapper class="my-4" :is-disabled="disabled" :error="errorMessage" :label="label" :help="help" :optional="optional">
     <input :disabled="disabled" class="form-input w-full" type="text" placeholder="Doe">
   </input-wrapper>
 
-  <input-wrapper v-if="showWithOtherControls" label="Email" help="So we can SPAM the shit out of you.">
+  <input-wrapper class="my-4" v-if="showWithOtherControls" label="Email" help="So we can SPAM the shit out of you.">
     <input class="form-input w-full" type="text" placeholder="johndoe@example.com">
   </input-wrapper>
 
