@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
-    require('postcss-import'), // eslint-disable-line
-    require('tailwindcss'), // eslint-disable-line
-    require('autoprefixer'), // eslint-disable-line
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'),
+    require('autoprefixer'),
   ],
 };
