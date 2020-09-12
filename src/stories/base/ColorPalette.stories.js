@@ -1,4 +1,4 @@
-import { colorMap } from '../../src/utils/colors.js';
+import { colorMap } from '../../utils/colors.js';
 
 const templateDecorator = () => ({
   template: `
