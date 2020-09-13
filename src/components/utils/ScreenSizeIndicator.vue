@@ -1,6 +1,9 @@
 <template>
   <div v-if="development"
-       class="group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-75">
+       class="text-center group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-100">
+    <div class="hidden group-hover:block text-center text-xs text-white m-1">
+      {{ `${$vssWidth} x ${$vssHeight}` }}
+    </div>
     <span class="inline-block sm:hidden group-hover:inline-block mx-1 text-white sm:text-gray-400">
       <phoneIcon />
       <div class="indicator-label">all</div>
@@ -29,12 +32,13 @@
 </template>
 
 <script>
-import displayIcon from 'bootstrap-icons/icons/display.svg?inline';
-import laptopIcon from 'bootstrap-icons/icons/laptop.svg?inline';
-import phoneIcon from 'bootstrap-icons/icons/phone.svg?inline';
-import phoneLandscapeIcon from 'bootstrap-icons/icons/phone-landscape.svg?inline';
-import tabletLandscapeIcon from 'bootstrap-icons/icons/tablet-landscape.svg?inline';
-import tvIcon from 'bootstrap-icons/icons/tv.svg?inline';
+import VueScreenSize from 'vue-screen-size'
+import displayIcon from 'bootstrap-icons/icons/display.svg?inline'
+import laptopIcon from 'bootstrap-icons/icons/laptop.svg?inline'
+import phoneIcon from 'bootstrap-icons/icons/phone.svg?inline'
+import phoneLandscapeIcon from 'bootstrap-icons/icons/phone-landscape.svg?inline'
+import tabletLandscapeIcon from 'bootstrap-icons/icons/tablet-landscape.svg?inline'
+import tvIcon from 'bootstrap-icons/icons/tv.svg?inline'
 
 export default {
   name: 'ScreenSizeIndicator',
@@ -46,9 +50,10 @@ export default {
     tabletLandscapeIcon,
     tvIcon
   },
+  mixins: [VueScreenSize.VueScreenSizeMixin],
   data() {
     return {
-      development: (process.env.NODE_ENV === 'development')
+      development: (process.env.NODE_ENV === 'development'),
     }
   }
 };

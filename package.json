@@ -27,6 +27,7 @@
     "typeface-source-sans-pro": "^1.1.5",
     "vue": "^2.6.12",
     "vue-router": "^3.4.3",
+    "vue-screen-size": "^1.0.1",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
