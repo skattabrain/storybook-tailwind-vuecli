@@ -64,6 +64,7 @@ module.exports = {
   },
   variants: {
     display: ['responsive', 'hover', 'focus', 'group-hover'],
+    overflow: ({ after }) => after(['responsive']),
   },
   plugins: [
     require('@tailwindcss/custom-forms'),
