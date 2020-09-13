@@ -1,41 +1,78 @@
 <template>
   <div class="experiment">
-    <div class="navigation">
-      Navigation
+    <div class="header">
+      Header
     </div>
-    <div class="sidebar">
+    <div class="sidebar bg-teal-400">
       SideBar
     </div>
-    <div class="maincontent">
-      <h1>Main Content</h1>
-      <p>Sociosqu sagittis integer enim auctor fringilla litora scelerisque porttitor suspendisse congue commodo interdum duis cursus pulvinar nisl, purus tristique suscipit tempus cubilia maecenas praesent ac lobortis in ad nulla curae finibus. Massa at egestas senectus et sollicitudin taciti mus suspendisse dolor, proin id mollis aenean congue pellentesque integer enim sapien, class orci netus dapibus morbi aptent accumsan diam. Ullamcorper augue arcu interdum class ridiculus inceptos himenaeos, amet potenti litora non consectetur sodales a sociosqu, vestibulum porttitor vulputate blandit volutpat at. Feugiat habitasse tellus curabitur aliquam fusce vulputate montes blandit risus, nascetur quam iaculis odio sed est velit hendrerit ad faucibus, interdum laoreet tristique urna aenean nostra fermentum per. Platea id nascetur vulputate penatibus praesent integer eleifend odio morbi tortor cubilia luctus, habitant curabitur metus tellus sem mi facilisi quisque curae nam. Libero donec inceptos adipiscing quam lacinia non conubia, sed lectus eros turpis hendrerit blandit risus himenaeos, elementum suspendisse convallis ad ipsum duis. Quam varius facilisis potenti vel libero in tincidunt turpis porttitor taciti, consequat nisl primis morbi montes conubia enim ante integer praesent eleifend, suspendisse finibus mi consectetur curae ultricies nunc gravida purus. Eleifend litora id sagittis sed odio ad dignissim condimentum consectetur duis, viverra orci metus non dictum habitant tincidunt turpis laoreet porttitor ultrices, phasellus dis lacus nibh suscipit aliquam taciti eros nunc. Arcu odio potenti luctus nam ipsum pretium conubia donec, laoreet phasellus tempor orci convallis nec tellus facilisis, eu senectus pellentesque elementum viverra consectetur iaculis. Nec quis potenti nascetur dolor orci aliquam hendrerit cras ante erat, consectetur libero velit a purus posuere consequat platea.</p>
-      <p>Metus dolor placerat vel purus vitae rhoncus consectetur himenaeos, bibendum mattis donec enim et imperdiet per, justo mauris varius leo efficitur lobortis finibus. Ad felis cursus aenean feugiat curae porttitor massa sociosqu, himenaeos volutpat conubia dis dui mollis habitant, facilisi mattis integer platea vulputate neque curabitur. Ultrices neque velit dapibus pellentesque tristique quisque magna cras porttitor ad, ipsum mollis quam suscipit accumsan aenean dui facilisi. Venenatis donec sed bibendum magnis commodo accumsan gravida porttitor tincidunt vel dictum, ornare platea ipsum maximus ex varius habitasse viverra elit curabitur, eu suscipit condimentum mauris libero fusce pulvinar amet ultrices parturient. Feugiat turpis vulputate lacus duis iaculis morbi potenti eu elementum, sed vestibulum massa facilisi porttitor maecenas taciti mollis proin metus, dignissim praesent odio etiam venenatis suscipit natoque vitae.</p>
-      <p>Lorem ultricies gravida sit finibus parturient odio vehicula, id curabitur laoreet erat auctor eu, adipiscing lacus senectus donec habitant consequat. Ante nostra fermentum blandit natoque ut arcu purus parturient et, donec adipiscing mauris quis imperdiet eros placerat. Leo a praesent enim elit integer viverra taciti nibh magna felis mus convallis sagittis amet dis, pulvinar aenean facilisi massa luctus senectus odio eleifend vulputate augue est iaculis lorem interdum. Magnis senectus mi erat himenaeos nullam nam tortor ridiculus a, ante viverra egestas ex faucibus ullamcorper lorem consectetur, sollicitudin at dignissim lacus rhoncus curae quisque habitant. Iaculis hendrerit aliquet eros nullam metus ridiculus dictumst, nunc viverra vel scelerisque sollicitudin auctor, molestie justo ultricies mauris phasellus tempus sit, himenaeos netus augue velit amet.</p>
-      <p>Curae rhoncus tincidunt a id bibendum montes tellus ligula, habitant praesent mi sapien proin sodales condimentum, tristique magnis dis viverra lacus turpis euismod. Nibh a orci dis bibendum volutpat curae proin in eu, tellus tristique vitae nulla dapibus blandit elementum fringilla nec, iaculis ex dui mus lobortis praesent aliquet cras. Sem est lorem ac himenaeos auctor egestas dui ultricies, dignissim blandit eu vitae porttitor tincidunt posuere etiam eget, faucibus tempus phasellus inceptos tellus sodales rutrum. Sodales porttitor fusce consectetur conubia tincidunt euismod, nisl dui nullam semper taciti primis, congue porta lectus sapien laoreet. Suspendisse id fusce ac rhoncus scelerisque interdum est pharetra, aptent praesent per magna hendrerit cursus arcu ultricies, ex dictumst lacinia vel luctus gravida mattis. Laoreet fermentum quam nisi amet lacus purus, nascetur dui phasellus metus himenaeos, dignissim habitasse justo suscipit diam. Rhoncus efficitur habitasse litora orci morbi semper libero, urna hendrerit ultrices fames nascetur metus natoque, etiam ridiculus lacus ac aptent ex.	</p><p>Ultrices id nam quis nisi suspendisse dictumst aliquam integer, egestas tincidunt pharetra nascetur volutpat nec lobortis conubia tellus, facilisis libero cubilia venenatis justo facilisi purus. Nisi eget class turpis congue ex aliquet efficitur fusce dui sodales, potenti a sapien montes tempus habitasse nullam mollis at accumsan, netus hac vestibulum id cursus hendrerit senectus mauris consectetur. Ultrices curae nisi fames dictumst potenti faucibus duis hac, dui sem ac auctor etiam integer nibh penatibus rutrum, phasellus neque non rhoncus dis vel bibendum. Rutrum dictum natoque blandit habitant dis pharetra, sollicitudin lobortis euismod tortor aliquam nisi, at semper ligula tempor congue. Phasellus lacinia sem molestie sollicitudin torquent leo ante primis pellentesque, at felis non ipsum eu nam suspendisse habitant, imperdiet vestibulum bibendum purus montes platea senectus augue. Egestas posuere a nascetur praesent volutpat risus iaculis, dolor tempus quam nulla mollis viverra ornare suspendisse, vitae id lectus tortor mauris habitant.	</p><p>Sem duis dis varius leo nec lorem magna libero pulvinar, placerat facilisi montes suscipit natoque urna volutpat ultricies penatibus maecenas, dolor nisl amet suspendisse mus et hendrerit quis. Rutrum lectus aliquam orci dolor libero euismod, diam morbi placerat elit mattis eros taciti, scelerisque enim praesent sollicitudin ad. Et natoque finibus dignissim hendrerit fusce ligula elit dictumst elementum, ridiculus cursus inceptos nunc fames nascetur pharetra sollicitudin, venenatis in vehicula justo ullamcorper molestie vitae platea. Adipiscing condimentum pharetra natoque rutrum congue efficitur eget netus sed sollicitudin, tellus mauris eleifend ultricies odio dignissim justo dolor magna, dictum dis magnis hac faucibus nullam mus montes ante. Molestie arcu egestas laoreet maecenas pharetra et ultricies, efficitur cubilia hac convallis sollicitudin ornare elit mollis, integer velit senectus himenaeos urna ultrices. Consequat a velit fames odio lacinia magna nisl cursus at gravida tempor urna mus, in nostra euismod litora ante tortor semper ullamcorper quisque donec eleifend. Euismod mus auctor quam litora finibus class hendrerit facilisi vel vestibulum dolor, eros vehicula feugiat convallis fringilla porttitor aptent efficitur habitasse.	</p><p>Egestas quam facilisi facilisis iaculis erat est mauris fringilla hac ullamcorper blandit mi sociosqu, lacus enim vitae imperdiet vivamus feugiat non praesent metus aliquam faucibus aptent. Nibh habitant diam duis fermentum cras aliquet taciti, adipiscing habitasse facilisis ornare inceptos sapien ullamcorper augue, aenean placerat consequat commodo amet nascetur. Fames at donec mi taciti curae nullam luctus aenean, rhoncus dolor proin semper suspendisse suscipit integer, venenatis et nisl accumsan eu turpis maecenas. Egestas class suspendisse rhoncus parturient sed vulputate felis neque metus nunc magna a tellus sit, mi bibendum aliquam id conubia vitae nascetur diam accumsan habitasse imperdiet molestie ligula. Aenean nostra vel magna porttitor leo aliquet sed, facilisis facilisi mollis per tincidunt orci ultricies pharetra, fermentum nam et proin morbi lobortis. Accumsan maecenas molestie ut dapibus fusce et interdum, auctor magna integer nisi fermentum donec, pulvinar condimentum eleifend sagittis nascetur himenaeos.	</p><p>Iaculis nostra parturient scelerisque tristique facilisis tellus mauris augue, cursus ultricies mollis amet mus eu et nullam, velit aliquet vulputate ut quisque dui turpis. Lacinia taciti venenatis tempor congue rhoncus gravida ullamcorper risus sit, scelerisque hac habitant quis fames mus quisque massa, ex vivamus curabitur vel imperdiet leo consectetur proin. Nec ullamcorper libero facilisi habitasse urna sagittis auctor volutpat convallis adipiscing primis feugiat, lacinia placerat morbi mauris varius cursus cubilia mollis semper ultrices nisl efficitur finibus, ipsum magna lectus parturient aenean aliquam at lobortis class ad congue. Scelerisque massa ridiculus augue litora sapien enim egestas velit curabitur vehicula cubilia finibus, ad efficitur lacus sollicitudin conubia cursus porta auctor malesuada convallis. Facilisis purus accumsan natoque metus diam consectetur tortor vehicula, netus dictumst habitant aenean eros enim auctor, cursus commodo amet adipiscing sem fringilla bibendum. Habitasse scelerisque massa a nullam consequat pretium vulputate pulvinar libero aptent, mollis felis aliquet penatibus accumsan facilisi eleifend donec auctor varius, lorem vehicula elementum sodales sed tortor facilisis maecenas et. Arcu nam dis maecenas quam maximus feugiat, elementum cursus lacus suscipit sed, mollis natoque mauris gravida nulla. Accumsan curabitur sapien interdum faucibus cubilia platea, pretium leo dui dolor velit semper consectetur, tristique hendrerit nascetur elit egestas.</p>
+    <div class="content">
+      <ListingCards :listings="listings" />
+    </div>
+    <div class="footer text-gray-400 text-xs p-1">
+      Copyright &copy; Some Company
     </div>
   </div>
 </template>
 
+<script>
+import ListingCards from '@/components/ListingCards.vue';
+import listings from '@/mocks/listings';
+
+export default {
+	components: {
+		ListingCards
+	},
+	data: () => ({
+	listings,
+  }),
+}
+</script>
 <style lang="css" scoped>
 	.experiment {
-		@apply grid gap-2 h-screen bg-gray-200 p-2;
-		grid-template-columns: 300px 1fr;
-		grid-template-rows: auto 1fr;
+		@apply h-screen bg-gray-200 overflow-y-auto;
+		display: grid;
+		grid-template-rows: 80px auto 1fr auto;
+		grid-template-areas:
+				"header"
+				"sidebar"
+				"content"
+				"footer";
+
+		@screen md {
+			grid-template-columns: 200px 1fr;
+			grid-template-rows: auto 1fr;
+			grid-template-areas:
+				"header		header"
+				"sidebar	content"
+				"footer 	footer";
+		}
+
+		@screen lg {
+			grid-template-columns: 300px 1fr;
+		}
 	}
+
 	.sidebar {
+		grid-area: sidebar;
 		@apply bg-blue-300 p-2;
 	}
-	.navigation {
+	.header {
+		grid-area: header;
 		@apply bg-red-300 inline-flex items-center p-2;
-		height: 60px;
-		grid-column: 1 / -1;
 	}
-	.maincontent {
-		@apply bg-green-300 overflow-y-auto p-2;
+	.content {
+		grid-area: content;
+
+		@screen md {
+			@apply overflow-y-auto;
+		}
 
 		p {
 			@apply mb-4;
 		}
 	}
+	.footer {
+		grid-area: footer;
+	}
 </style>
-;

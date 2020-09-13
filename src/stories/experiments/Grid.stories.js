@@ -4,7 +4,7 @@ export default {
   title: 'Experiments/Grid',
 };
 
-export const Empty = () => ({
+export const AppLayout = () => ({
 	components: {
 		Experiment
 	},

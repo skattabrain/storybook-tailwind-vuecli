@@ -27,8 +27,8 @@
           {{ miles | numberFilter }} mi
         </div>
       </div>
-      <div class="text-xs text-gray-500">
-        {{ dealer }} of {{ location }}
+      <div class="text-xs text-gray-500 truncate">
+        {{ location }} &ndash; {{ dealer }}
       </div>
     </div>
   </div>

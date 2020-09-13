@@ -1,9 +1,8 @@
 <template>
-  <div class="flex flex-wrap -mx-2 px-2 sm:px-0">
-    <div
-      v-for="listing in listings"
-      :key="listing.id"
-      class="flex w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 xxl:w-1/6 px-3 mb-6">
+  <div class="listing-cards grid place-items-stretch">
+    <div v-for="listing in listings"
+         :key="listing.id"
+         class="item p-2">
       <listing-card
         :id="listing.id"
         :url="listing.url"
@@ -35,3 +34,13 @@ export default {
   },
 };
 </script>
+
+<style lang="css" scoped>
+  .listing-cards {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    /* @screen xl {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    } */
+  }
+</style>
