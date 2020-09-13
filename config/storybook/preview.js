@@ -89,7 +89,7 @@ const componentPaddings = [
 
 const componentWidths = [
   {
-    value: 'w-full',
+    value: '',
     title: '100% Width'
   },
   {
@@ -120,7 +120,7 @@ export const globalTypes = {
   componentWidth: {
     name: 'Component Width',
     description: 'Set a width for the component to render in',
-    defaultValue: 'w-full',
+    defaultValue: '',
     toolbar: {
       icon: 'arrowrightalt',
       items: componentWidths
@@ -152,49 +152,34 @@ export const parameters = {
   controls: { hideNoControlsWarning: true },
 }
 
-const fontSelectionObservable = Vue.observable({ fontSelection: null });
-const fontSelectionProvider = (Story, context) => {
-  fontSelectionObservable.fontSelection = context.globals.fontSelection
+const globalTypesObservable = Vue.observable({
+  componentPadding: null,
+  componentWidth: null,
+  fontSelection: null,
+});
 
-  return {
-    computed: {
-      fontSelection: () => {
-        return fontSelectionObservable.fontSelection
-      }
-    },
-    template: '<div :class="fontSelection"><story /></div>'
-  }
-}
-
-const componentPaddingObservable = Vue.observable({ componentPadding: null });
-const componentPaddingProvider = (Story, context) => {
-  componentPaddingObservable.componentPadding = context.globals.componentPadding
-
-  return {
-    computed: {
-      componentPadding: () => {
-        return componentPaddingObservable.componentPadding
-      }
-    },
-    template: '<div :class="componentPadding"><story /></div>'
-  }
-}
-
-const componentWidthObservable = Vue.observable({ componentWidth: null });
-const componentWidthProvider = (Story, context) => {
-  componentWidthObservable.componentWidth = context.globals.componentWidth
+const componentViewProvider = (Story, context) => {
+  globalTypesObservable.fontSelection = context.globals.fontSelection
+  globalTypesObservable.componentPadding = context.globals.componentPadding
+  globalTypesObservable.componentWidth = context.globals.componentWidth
 
   return {
     components: {
       ScreenSizeIndicator
     },
     computed: {
-      componentWidth: () => {
-        return componentWidthObservable.componentWidth
+      fontSelection() {
+        return globalTypesObservable.fontSelection
+      },
+      componentPadding() {
+        return globalTypesObservable.componentPadding
+      },
+      componentWidth() {
+        return globalTypesObservable.componentWidth
       }
     },
-    template: '<div><div :class="componentWidth"><story /></div><ScreenSizeIndicator /></div>'
+    template: '<div :class="[fontSelection, componentPadding, componentWidth]"><story /><ScreenSizeIndicator /></div>'
   }
 }
 
-export const decorators = [ fontSelectionProvider, componentWidthProvider, componentPaddingProvider ]
+export const decorators = [componentViewProvider]
