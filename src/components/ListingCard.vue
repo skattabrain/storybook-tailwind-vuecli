@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col cursor-pointer bg-white duration-150 ease-in-out hover:scale-105 rounded shadow-lg transform transition w-full"
+    class="flex flex-col cursor-pointer bg-white rounded shadow hover:shadow-lg transition-shadow duration-200 w-full"
     @click="select">
     <div class="h-28 sm:h-32 bg-gray-900 rounded-t">
       <img
