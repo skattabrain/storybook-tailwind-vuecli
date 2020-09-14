@@ -1,31 +1,31 @@
 <template>
   <div v-if="development"
        class="text-center group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-100">
-    <div class="hidden group-hover:block text-center text-xs text-white m-1">
+    <div class="hidden group-hover:block text-xs text-white m-1">
       {{ `${$vssWidth} x ${$vssHeight}` }}
     </div>
     <span class="inline-block sm:hidden group-hover:inline-block mx-1 text-white sm:text-gray-400">
-      <phoneIcon />
+      <phoneIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">all</div>
     </span>
     <span class="hidden sm:inline-block md:hidden group-hover:inline-block mx-1 sm:text-white md:text-gray-400">
-      <phoneLandscapeIcon />
+      <phoneLandscapeIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">sm</div>
     </span>
     <span class="hidden md:inline-block lg:hidden group-hover:inline-block mx-1 md:text-white lg:text-gray-400">
-      <tabletLandscapeIcon />
+      <tabletLandscapeIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">md</div>
     </span>
     <span class="hidden lg:inline-block xl:hidden group-hover:inline-block mx-1 lg:text-white xl:text-gray-400">
-      <laptopIcon />
+      <laptopIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">lg</div>
     </span>
     <span class="hidden xl:inline-block xxl:hidden group-hover:inline-block mx-1 xl:text-white xxl:text-gray-400">
-      <displayIcon />
+      <displayIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">xl</div>
     </span>
     <span class="hidden xxl:inline-block group-hover:inline-block xxl:text-white mx-1">
-      <tvIcon />
+      <tvIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">xxl</div>
     </span>
   </div>
