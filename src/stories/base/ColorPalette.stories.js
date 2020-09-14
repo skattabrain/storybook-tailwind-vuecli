@@ -1,19 +1,6 @@
 import { colorMap } from '../../utils/colors.js';
 
-const templateDecorator = () => ({
-  template: `
-<div class="min-h-screen w-screen">
-    <div class="container pt-6">
-      <story />
-    </div>
-</div>
-    `,
-});
-
 export default {
-  decorators: [
-    templateDecorator,
-  ],
   title: 'Base/Colors',
 };
 
@@ -22,7 +9,7 @@ export const palette = () => ({
     colors: colorMap(),
   }),
   template: `
-<div>
+<div class="p-6">
   <div v-for="color in colors" class="mb-6">
     <h3 class="capitalize font-semibold mb-2 text-lg text-gray-900">{{ color.name }}</h3>
     <div class="flex flex-wrap">
