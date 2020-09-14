@@ -1,15 +1,58 @@
 <template>
-  <div class="experiment">
-    <div class="header">
+  <div class="experiment grid h-screen bg-gray-200 overflow-y-auto">
+    <div class="header inline-flex items-center p-2">
       Header
     </div>
-    <div class="sidebar bg-teal-400">
-      SideBar
+    <div class="sidebar p-2 md:overflow-y-auto">
+      <div class="max-h-full overflow-y-scroll bg-gray-50 border-gray-100 border-1 rounded">
+        <ul>
+          <li><a href="#">Menu Option #1</a></li>
+          <li><a href="#">Menu Option #2</a></li>
+          <li><a href="#">Menu Option #3</a></li>
+          <li><a href="#">Menu Option #4</a></li>
+          <li><a href="#">Menu Option #5</a></li>
+          <li><a href="#">Menu Option #6</a></li>
+          <li><a href="#">Menu Option #7</a></li>
+          <li><a href="#">Menu Option #8</a></li>
+          <li><a href="#">Menu Option #9</a></li>
+          <li><a href="#">Menu Option #10</a></li>
+          <li><a href="#">Menu Option #11</a></li>
+          <li><a href="#">Menu Option #12</a></li>
+          <li><a href="#">Menu Option #13</a></li>
+          <li><a href="#">Menu Option #14</a></li>
+          <li><a href="#">Menu Option #15</a></li>
+          <li><a href="#">Menu Option #16</a></li>
+          <li><a href="#">Menu Option #17</a></li>
+          <li><a href="#">Menu Option #18</a></li>
+          <li><a href="#">Menu Option #19</a></li>
+          <li><a href="#">Menu Option #20</a></li>
+          <li><a href="#">Menu Option #21</a></li>
+          <li><a href="#">Menu Option #22</a></li>
+          <li><a href="#">Menu Option #23</a></li>
+          <li><a href="#">Menu Option #24</a></li>
+          <li><a href="#">Menu Option #25</a></li>
+          <li><a href="#">Menu Option #26</a></li>
+          <li><a href="#">Menu Option #27</a></li>
+          <li><a href="#">Menu Option #28</a></li>
+          <li><a href="#">Menu Option #29</a></li>
+          <li><a href="#">Menu Option #30</a></li>
+          <li><a href="#">Menu Option #31</a></li>
+          <li><a href="#">Menu Option #32</a></li>
+          <li><a href="#">Menu Option #33</a></li>
+          <li><a href="#">Menu Option #34</a></li>
+          <li><a href="#">Menu Option #35</a></li>
+          <li><a href="#">Menu Option #36</a></li>
+          <li><a href="#">Menu Option #37</a></li>
+          <li><a href="#">Menu Option #38</a></li>
+          <li><a href="#">Menu Option #39</a></li>
+          <li><a href="#">Menu Option #40</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="content">
+    <div class="content md:overflow-y-auto">
       <ListingCards :listings="listings" />
     </div>
-    <div class="footer text-gray-400 text-xs p-1">
+    <div class="footer text-gray-400 text-xs py-1 px-2">
       Copyright &copy; Some Company
     </div>
   </div>
@@ -28,10 +71,9 @@ export default {
   }),
 }
 </script>
+
 <style lang="css" scoped>
 	.experiment {
-		@apply h-screen bg-gray-200 overflow-y-auto;
-		display: grid;
 		grid-template-rows: 80px auto 1fr auto;
 		grid-template-areas:
 				"header"
@@ -41,7 +83,7 @@ export default {
 
 		@screen md {
 			grid-template-columns: 200px 1fr;
-			grid-template-rows: auto 1fr;
+			grid-template-rows: auto 1fr auto;
 			grid-template-areas:
 				"header		header"
 				"sidebar	content"
@@ -53,25 +95,36 @@ export default {
 		}
 	}
 
-	.sidebar {
-		grid-area: sidebar;
-		@apply bg-blue-300 p-2;
-	}
 	.header {
 		grid-area: header;
-		@apply bg-red-300 inline-flex items-center p-2;
 	}
+
+	.sidebar {
+		grid-area: sidebar;
+
+		ul {
+			li {
+				@apply border-b border-gray-200;
+
+				a {
+					@apply text-purple-500 p-2 block;
+
+					&:hover {
+						@apply bg-white;
+					}
+				}
+			}
+		}
+	}
+
 	.content {
 		grid-area: content;
-
-		@screen md {
-			@apply overflow-y-auto;
-		}
 
 		p {
 			@apply mb-4;
 		}
 	}
+
 	.footer {
 		grid-area: footer;
 	}
