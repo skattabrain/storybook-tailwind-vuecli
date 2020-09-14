@@ -37,7 +37,7 @@ export default {
 
 <style lang="css" scoped>
   .listing-cards {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     /* @screen xl {
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
