@@ -1,4 +1,3 @@
-import './storybook.css'
 import '../../src/styles/index.css'
 import { addParameters } from '@storybook/vue'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
