@@ -177,7 +177,7 @@ const componentViewProvider = (Story, context) => {
         return globalTypesObservable.componentWidth
       }
     },
-    template: '<div :class="[fontSelection, componentPadding, componentWidth]"><story /><ScreenSizeIndicator /></div>'
+    template: '<div class="h-full" :class="[fontSelection, componentPadding, componentWidth]"><story /><ScreenSizeIndicator /></div>'
   }
 }
 
