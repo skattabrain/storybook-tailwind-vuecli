@@ -17,6 +17,10 @@ module.exports = {
       },
     }),
     extend: {
+      boxShadow: {
+        lg: '0 10px 6px -8px rgba(0, 0, 0, 0.075), 0 4px 6px -8px rgba(0, 0, 0, 0.05)',
+        'top-lg': '0 -10px 6px -8px rgba(0, 0, 0, 0.075), 0 -4px 6px -8px rgba(0, 0, 0, 0.05)',
+      },
       screens: {
         xxl: '1440px',
         hd: '1920px',

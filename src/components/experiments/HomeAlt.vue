@@ -1,55 +1,104 @@
 <template>
   <div class="bg-gray-200">
-    <div class="fixed left-0 top-0 w-full flex flex-row items-center p-3 text-3xl bg-gray-200 h-12">
-      <BrandLogo :dark="true" class="flex-grow" />
-      <button class="p-2 border">
-        <listIcon class="text-xl" />
+    <div class="fixed left-0 top-0 w-full flex flex-row items-center px-1 bg-gray-200 z-10 shadow-lg">
+      <button class="inline-flex items-center justify-center text-center h-10 w-10">
+        <houseIcon class="text-2xl" />
+        <span class="hidden">Home</span>
+      </button>
+      <BrandLogo :dark="true" class="flex-grow text-center text-2xl my-2" />
+      <button class="inline-flex items-center justify-center text-center h-10 w-10">
+        <listIcon class="text-3xl" />
+        <span class="hidden">Menu</span>
       </button>
     </div>
-    <div class="content p-3 mb-24 mt-15">
-      <div class="">
-        <h3 class="font-bold text-2xl space-y-3">
-          Content Area
-        </h3>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
-        <p>Ad aenean vulputate molestie arcu habitant natoque magnis fermentum, inceptos nec dapibus nascetur egestas nulla per pulvinar orci, semper nibh torquent ligula tincidunt non feugiat..</p>
+    <div class="content bg-gray-200 my-12 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
+      <div class="page-intro space-y-1 px-3 py-6 text-gray-50 bg-gray-800">
+        <h1 class="font-bold text-xl">
+          Limousines, Sprinters & Buses For Sale
+        </h1>
+        <p>
+          Your new one-stop shop for both buying and selling new and used limousines, Mercedes-Benz Sprinters, buses and custom motorcoaches. We've been working in the luxury ground transportation industry since 1987 and we are now viewed in over 180 countries.
+        </p>
+        <div class="flex space-x-3 py-4">
+          <button class="p-2 flex-1 border-2 text-white">
+            Browse <span class="sm:inline-block hidden">Listings</span>
+          </button>
+          <button class="p-2 flex-1 border-2 text-white">
+            List <span class="sm:inline-block hidden">Vehicle</span>
+          </button>
+          <button class="p-2 flex-1 border-2 text-white">
+            Cash Offer
+          </button>
+        </div>
+      </div>
+      <h2 class="text-center text-lg my-3">
+        Browse Listings
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 my-3 mx-2 gap-x-2 gap-y-4">
+        <div v-for="listing in listings"
+             :key="listing.id"
+             class="item-listing">
+          <listing-card
+            :id="`listing-${listing.stockNumber}`"
+            :url="listing.url"
+            :location="listing.location"
+            :stock-number="listing.stockNumber"
+            :title="listing.title"
+            :price="listing.price"
+            :miles="listing.miles"
+            :dealer="listing.dealer"
+            :desc="listing.description"
+            :image-url="listing.image" />
+        </div>
       </div>
     </div>
-    <div class="fixed left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-3 pb-2 pt-3 bg-gray-200">
+    <div class="fixed left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-0 pb-2 pt-3 bg-gray-200 text-gray-500">
       <a href="#">
-        <truckIcon class="text-3xl mb-1" />
+        <truckIcon class="text-gray-700 text-2xl mb-1" />
         Browse
       </a>
-      <a href="#">
-        <plusIcon class="text-3xl mb-1" />
+      <button type="button" @click="modal = !modal">
+        <searchIcon class="text-gray-700 text-2xl mb-1" />
+        Search
+      </button>
+      <a v-if="loggedIn" href="#">
+        <plusIcon class="text-gray-700 text-2xl mb-1" />
         List
       </a>
-      <a href="#">
-        <listIcon class="text-3xl mb-1" />
-        Menu
+      <a v-else href="#">
+        <emailIcon class="text-gray-700 text-2xl mb-1" />
+        Subscribe
       </a>
-      <a href="#">
-        <searchIcon class="text-3xl mb-1" />
-        Search
-      </a>
-      <a href="#">
-        <profileIcon class="text-3xl mb-1" />
+      <button type="button" @click="lit = !lit">
+        <heartFillIcon v-if="lit" class="text-red-500 text-2xl mb-1" />
+        <heartIcon v-else class="text-gray-700 text-2xl mb-1" />
+        Saved
+      </button>
+      <button type="button" @click="loggedIn = !loggedIn">
+        <profileIcon class="text-gray-700 text-2xl mb-1" />
         Profile
-      </a>
+      </button>
+    </div>
+    <div v-if="modal" class="bg-white fixed h-screen overflow-scroll p-5 top-0 z-30">
+      <button class="border float-right p-2" @click="modal = !modal">
+        <closeIcon />
+      </button>
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold">
+          Search
+        </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -57,28 +106,51 @@
 <script>
 import listIcon from 'bootstrap-icons/icons/list.svg?inline'
 import plusIcon from 'bootstrap-icons/icons/plus-square-fill.svg?inline'
+import emailIcon from 'bootstrap-icons/icons/envelope-open.svg?inline'
+import closeIcon from 'bootstrap-icons/icons/x.svg?inline'
+import houseIcon from 'bootstrap-icons/icons/house.svg?inline'
 import searchIcon from 'bootstrap-icons/icons/search.svg?inline'
 import profileIcon from 'bootstrap-icons/icons/person-circle.svg?inline'
+import heartIcon from 'bootstrap-icons/icons/heart.svg?inline'
+import heartFillIcon from 'bootstrap-icons/icons/heart-fill.svg?inline'
 import truckIcon from 'bootstrap-icons/icons/truck.svg?inline'
 import BrandLogo from '@/components/Logo.vue'
+import ListingCard from '@/components/ListingCard.vue'
+import listings from '@/mocks/listings';
 
 export default {
 	components: {
     BrandLogo,
+    closeIcon,
     listIcon,
+    emailIcon,
+    houseIcon,
     truckIcon,
     plusIcon,
+    heartIcon,
+    heartFillIcon,
     profileIcon,
     searchIcon,
+    ListingCard,
 	},
 	data: () => ({
-
+    listings,
+    loggedIn: false,
+    lit: false,
+    modal: false
   }),
 }
 </script>
 
 <style lang="css">
-  .navigation a {
-    @apply w-full flex flex-col items-center justify-center;
+  /* .page-intro {
+    background-image: url('https://weselllimos.com/img/bg/bentley-limos-sm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+  } */
+
+  .navigation a, .navigation button {
+    @apply w-full flex flex-col items-center justify-center
   }
 </style>
