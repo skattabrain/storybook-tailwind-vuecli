@@ -1,3 +1,4 @@
+const colors = require('./colors');
 let purgeEnabled = (process.env.NODE_ENV === 'production' && !process.argv.includes('config/storybook'))
 
 module.exports = {
@@ -9,6 +10,14 @@ module.exports = {
     ]
   },
   theme: {
+    colors: {
+      ...colors,
+      transparent: 'transparent',
+      current: 'currentColor',
+
+      black: '#000',
+      white: '#fff',
+    },
     customForms: (theme) => ({
       default: {
         input: {
@@ -71,7 +80,7 @@ module.exports = {
     overflow: ({ after }) => after(['responsive']),
   },
   plugins: [
-    require('@tailwindcss/custom-forms'),
+    // require('@tailwindcss/custom-forms'),
     require('./src/styles/plugins/base'),
     require('./src/styles/plugins/fonts'),
     require('./src/styles/plugins/buttons'),
@@ -79,11 +88,12 @@ module.exports = {
   experimental: {
     uniformColorPalette: true,
     extendedSpacingScale: true,
-    defaultLineHeights: true,
     extendedFontSizeScale: true,
   },
   future: {
+    defaultLineHeights: true,
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
+    standardFontWeights: true
   },
 }

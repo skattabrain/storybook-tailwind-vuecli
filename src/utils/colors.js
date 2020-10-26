@@ -1,7 +1,8 @@
 // TODO - review/cleanup up this file as the needs of the addon-background has changed
-import uniformColorPalette from 'tailwindcss/lib/flagged/uniformColorPalette.js';
+// import uniformColorPalette from 'tailwindcss/lib/flagged/uniformColorPalette.js';
+import colorPalette from 'tailwindcss/colors.js';
 
-const colorPalette = uniformColorPalette.theme.colors;
+// const colorPalette = uniformColorPalette;
 
 function isObject(value) {
   return value && typeof value === 'object' && value.constructor === Object;

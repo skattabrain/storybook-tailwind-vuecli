@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-200">
-    <div class="fixed left-0 top-0 w-full flex flex-row items-center px-1 bg-gray-200 z-10 shadow-lg">
+  <div class="bg-coolGray-200">
+    <div class="fixed left-0 top-0 w-full flex flex-row items-center px-1 bg-coolGray-200 z-10 shadow-lg">
       <button class="inline-flex items-center justify-center text-center h-10 w-10">
         <houseIcon class="text-2xl" />
         <span class="hidden">Home</span>
@@ -11,8 +11,8 @@
         <span class="hidden">Menu</span>
       </button>
     </div>
-    <div class="content bg-gray-200 my-12 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
-      <div class="page-intro space-y-1 px-3 py-6 text-gray-50 bg-gray-800">
+    <div class="content bg-coolGray-200 my-12 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
+      <div class="page-intro space-y-1 px-3 py-6 text-coolGray-50 bg-coolGray-800">
         <h1 class="font-bold text-xl">
           Limousines, Sprinters & Buses For Sale
         </h1>
@@ -34,7 +34,7 @@
       <h2 class="text-center text-lg my-3">
         Browse Listings
       </h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 my-3 mx-2 gap-x-2 gap-y-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 my-3 mx-2 gap-x-3 gap-y-6">
         <div v-for="listing in listings"
              :key="listing.id"
              class="item-listing">
@@ -52,52 +52,54 @@
         </div>
       </div>
     </div>
-    <div class="fixed left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-0 pb-2 pt-3 bg-gray-200 text-gray-500">
+    <div class="fixed left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-0 pb-2 pt-3 bg-coolGray-200 text-coolGray-500">
       <a href="#">
-        <truckIcon class="text-gray-700 text-2xl mb-1" />
+        <truckIcon class="text-coolGray-700 text-2xl mb-1" />
         Browse
       </a>
       <button type="button" @click="modal = !modal">
-        <searchIcon class="text-gray-700 text-2xl mb-1" />
+        <searchIcon class="text-coolGray-700 text-2xl mb-1" />
         Search
       </button>
       <a v-if="loggedIn" href="#">
-        <plusIcon class="text-gray-700 text-2xl mb-1" />
+        <plusIcon class="text-coolGray-700 text-2xl mb-1" />
         List
       </a>
       <a v-else href="#">
-        <emailIcon class="text-gray-700 text-2xl mb-1" />
+        <emailIcon class="text-coolGray-700 text-2xl mb-1" />
         Subscribe
       </a>
       <button type="button" @click="lit = !lit">
         <heartFillIcon v-if="lit" class="text-red-500 text-2xl mb-1" />
-        <heartIcon v-else class="text-gray-700 text-2xl mb-1" />
+        <heartIcon v-else class="text-coolGray-700 text-2xl mb-1" />
         Saved
       </button>
       <button type="button" @click="loggedIn = !loggedIn">
-        <profileIcon class="text-gray-700 text-2xl mb-1" />
+        <profileIcon class="text-coolGray-700 text-2xl mb-1" />
         Profile
       </button>
     </div>
-    <div v-if="modal" class="bg-white fixed h-screen overflow-scroll p-5 top-0 z-30">
-      <button class="border float-right p-2" @click="modal = !modal">
-        <closeIcon />
-      </button>
-      <div class="space-y-4">
-        <h3 class="text-2xl font-bold">
-          Search
-        </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+    <div v-if="modal" class="fixed h-screen top-0 z-30">
+      <div class="bg-white h-full p-3 overflow-scroll">
+        <button class="border float-right p-2" @click="modal = !modal">
+          <closeIcon />
+        </button>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">
+            Search
+          </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
+        </div>
       </div>
     </div>
   </div>

@@ -17,7 +17,7 @@
     "bootstrap-icons": "^1.0.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
-    "tailwindcss": "^1.8.3",
+    "tailwindcss": "^2.0.0-alpha.2",
     "typeface-lato": "^0.0.75",
     "typeface-noto-sans": "^0.0.72",
     "typeface-nunito-sans": "^0.0.72",
