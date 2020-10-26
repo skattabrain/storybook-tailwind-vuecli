@@ -110,7 +110,7 @@ export const globalTypes = {
   fontSelection: {
     name: 'Font Selection',
     description: 'Set a font for the component to render in',
-    defaultValue: '',
+    defaultValue: 'font-source-sans-pro',
     toolbar: {
       icon: 'paragraph',
       items: fontSelections
