@@ -137,6 +137,10 @@ export default {
     text-shadow: 1px 1px #FFF;
   }
   .description {
-    max-height: 52px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: 54px; /* fallback for browsers lacking line-clamp support and the current font */
   }
 </style>
