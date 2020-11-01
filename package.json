@@ -31,10 +31,10 @@
     "vuex": "^3.5.1"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.0.22",
-    "@storybook/client-api": "^6.0.22",
-    "@storybook/client-logger": "^6.0.22",
-    "@storybook/vue": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/client-api": "^6.0.28",
+    "@storybook/client-logger": "^6.0.28",
+    "@storybook/vue": "^6.0.28",
     "@vue/cli-plugin-babel": "^4.4.6",
     "@vue/cli-plugin-eslint": "^4.4.6",
     "@vue/cli-plugin-router": "^4.4.6",
