@@ -1,6 +1,6 @@
 <template>
   <div v-if="development"
-       class="text-center group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 bg-opacity-25 hover:bg-opacity-100">
+       class="text-center group fixed bottom-0 right-0 text-gray-400 m-1 py-1 rounded bg-gray-800 opacity-25 hover:opacity-100">
     <div class="hidden group-hover:block text-xs text-white m-1">
       {{ `${$vssWidth} x ${$vssHeight}` }}
     </div>
