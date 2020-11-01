@@ -16,7 +16,9 @@ const colorMapper = (colors) => {
       const twColorVariations = Object.keys(colors[color]);
       const variations = twColorVariations.map((variation) => ({
         color: variation,
+        suffix: `${color}-${variation}`,
         bg: `bg-${color}-${variation}`,
+        text: `text-${color}-${variation}`,
         hex: colors[color][variation],
       }));
 
