@@ -1,22 +1,35 @@
-const colors = require('./colors');
-let purgeEnabled = (process.env.NODE_ENV === 'production' && !process.argv.includes('config/storybook'))
+const colors = require('./colors')
+const purgeEnabled = (process.argv.includes('-purge') || process.env.NODE_ENV === 'production')
+const isStorybook = process.argv.includes('config/storybook');
+
+const purgeContent = [
+  './src/**/*.vue',
+  './src/**/*.html',
+]
+
+if (isStorybook) {
+  purgeContent.push('./src/stories/**/*')
+  purgeContent.push('./config/storybook/preview.js') // one off to allow keeping of Storybook Addon Toolbar Options
+}
 
 module.exports = {
   purge: {
     enabled: purgeEnabled,
+    content: purgeContent,
     preserveHtmlElements: true,
-    content: [
-      './src/**/*.vue',
-    ]
+    options: {
+      safelist: [
+        /^bg-/, // needed for storybook
+      ],
+    },
   },
   theme: {
     colors: {
       ...colors,
       transparent: 'transparent',
       current: 'currentColor',
-
-      black: '#000',
-      white: '#fff',
+      black: '#000000',
+      white: '#ffffff',
     },
     customForms: (theme) => ({
       default: {
@@ -77,7 +90,9 @@ module.exports = {
   },
   variants: {
     display: ['responsive', 'hover', 'focus', 'group-hover'],
+    padding: ({ after }) => after(['hover']),
     overflow: ({ after }) => after(['responsive']),
+    zIndex: ({ after }) => after(['hover']),
   },
   plugins: [
     // require('@tailwindcss/custom-forms'),
