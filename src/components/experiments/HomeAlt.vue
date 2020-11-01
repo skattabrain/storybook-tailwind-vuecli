@@ -10,7 +10,7 @@
       </button>
     </div>
     <div class="content bg-coolGray-200 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
-      <div class="-mb-14 bg-coolGray-800 page-intro pb-16 pt-6 px-3 space-y-1 text-coolGray-50">
+      <div class="-mb-20 bg-coolGray-800 page-intro pb-20 pt-6 px-3 space-y-1 text-coolGray-50">
         <h1 class="font-bold text-xl">
           Limousines, Sprinters &amp; Buses For Sale
         </h1>
@@ -29,7 +29,7 @@
           </button>
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 my-12 mx-2 gap-x-3 gap-y-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 my-12 mx-3 gap-x-3 gap-y-6">
         <div v-for="listing in listings"
              :key="listing.id"
              class="item-listing">
@@ -47,15 +47,16 @@
             :desc="listing.description"
             :image-url="listing.image" />
         </div>
-        <!-- <div class="row-start-3 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
-          Advertiser Block
-        </div> -->
-        <div class="row-start-4 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
-          Advertiser Block
+        <div class="row-start-3 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block 1
         </div>
-        <!-- <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
-          Advertiser Block
+        <div class="row-start-6 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block 2
         </div>
+        <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block 3
+        </div>
+        <!--
         <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
           Advertiser Block
         </div>
