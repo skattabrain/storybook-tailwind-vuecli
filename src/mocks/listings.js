@@ -1,3 +1,4 @@
+import bentley from '@/assets/demo/bentley.jpg';
 import festiva from '@/assets/demo/festiva.jpg';
 import ferrari430 from '@/assets/demo/ferrari.jpg';
 import fosta from '@/assets/demo/fosta.jpg';
@@ -22,6 +23,7 @@ export default [
     stockNumber: 'WS-32489',
     location: 'Las Vegas, NV',
     url: '#',
+    badge: 'Low Miles!',
   },
   {
     id: 3222,
@@ -46,18 +48,7 @@ export default [
     stockNumber: 'WS-908',
     location: 'Miami, FL',
     url: '#',
-  },
-  {
-    id: 11908,
-    description: `Sweet? Nope.`,
-    image: festiva,
-    title: '1989 Ford Festiva',
-    price: 75,
-    miles: 328897,
-    dealer: 'Last Chance',
-    stockNumber: 'WS-11908',
-    location: 'Brockton, MA',
-    url: '#',
+    youtube: 'TESTING123'
   },
   {
     id: 98011,
@@ -82,6 +73,8 @@ export default [
     stockNumber: 'WS-8712',
     location: 'Las Vegas, NV',
     url: '#',
+    badge: 'You Wish',
+    youtube: 'TESTING456'
   },
   {
     id: 232489,
@@ -96,6 +89,18 @@ export default [
     url: '#',
   },
   {
+    id: 4091,
+    description: `Bamford Watch Department is a London firm specializing in the customization of Rolexes. Now George Bamford has turned his attentions to the Mulliner Speed, with a bespoke creation reflecting his own work in designing watches.`,
+    image: bentley,
+    title: '2017 Bentley Bamford Mulliner Speed',
+    price: 282000,
+    miles: 98300,
+    dealer: 'Zoinks Bentley',
+    stockNumber: 'WS-4091',
+    location: 'Haverhill, MA',
+    url: '#',
+  },
+  {
     id: 23222,
     description: `The Mercedes-AMG G63 follows on the heels of the new G-Class in January. Like the base G-Class, the car keeps the characteristic slightly-retro styling that has made the G-Class such a classic since its introduction as a civilian car in 1979. The new car is now powered by a 4 liter twin-turbocharged V8 instead of the previous generation's 5.5 liter twin turbocharged V8. In spite of the decreased displacement, output has risen by an additional 14 and 66 lb-ft of torque. It's quicker as well, with a 0-62 mph time of 4.5 seconds, whereas its predecessor took 5.4 seconds to reach the same speed. With all of that power, the engine also offers cylinder deactivation, with the engine running on only 4 cylinders for improved fuel efficiency.`,
     image: merc63,
@@ -106,6 +111,20 @@ export default [
     stockNumber: 'WS-23222',
     location: 'Boston, MA',
     url: '#',
+    badge: 'Hammer Down'
+  },
+  {
+    id: 11908,
+    description: `Sweet? Nope.`,
+    image: festiva,
+    title: '1989 Ford Festiva',
+    price: 75,
+    miles: 328897,
+    dealer: 'Last Chance',
+    stockNumber: 'WS-11908',
+    location: 'Brockton, MA',
+    url: '#',
+    badge: 'Total Shitbox!'
   },
   {
     id: 2908,
@@ -142,5 +161,6 @@ export default [
     stockNumber: 'WS-28712',
     location: 'Bangor, ME',
     url: '#',
+    badge: 'Ultra Rare'
   },
 ];
