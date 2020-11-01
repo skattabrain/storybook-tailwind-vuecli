@@ -1,40 +1,35 @@
 <template>
-  <div class="bg-coolGray-200">
-    <div class="fixed left-0 top-0 w-full flex flex-row items-center px-1 bg-coolGray-200 z-10 shadow-lg">
-      <button class="inline-flex items-center justify-center text-center h-10 w-10">
+  <div class="bg-coolGray-200 pt-12">
+    <div class="fixed left-0 top-0 w-full h-12 flex flex-row items-center px-1 bg-coolGray-200 text-coolGray-500 z-10 shadow-lg">
+      <button class="inline-flex items-center justify-center text-center h-10 w-10" aria-label="Home Page">
         <houseIcon class="text-2xl" />
-        <span class="hidden">Home</span>
       </button>
       <BrandLogo :dark="true" class="flex-grow text-center text-2xl my-2" />
-      <button class="inline-flex items-center justify-center text-center h-10 w-10">
+      <button class="inline-flex items-center justify-center text-center h-10 w-10" aria-label="Main Menu">
         <listIcon class="text-3xl" />
-        <span class="hidden">Menu</span>
       </button>
     </div>
-    <div class="content bg-coolGray-200 my-12 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
-      <div class="page-intro space-y-1 px-3 py-6 text-coolGray-50 bg-coolGray-800">
+    <div class="content bg-coolGray-200 space-y-4" :class="{ 'overflow-hidden h-full': modal }">
+      <div class="-mb-14 bg-coolGray-800 page-intro pb-16 pt-6 px-3 space-y-1 text-coolGray-50">
         <h1 class="font-bold text-xl">
-          Limousines, Sprinters & Buses For Sale
+          Limousines, Sprinters &amp; Buses For Sale
         </h1>
         <p>
           Your new one-stop shop for both buying and selling new and used limousines, Mercedes-Benz Sprinters, buses and custom motorcoaches. We've been working in the luxury ground transportation industry since 1987 and we are now viewed in over 180 countries.
         </p>
         <div class="flex space-x-3 py-4">
-          <button class="p-2 flex-1 border-2 text-white">
+          <button class="p-2 flex-1 border-2 rounded text-white">
             Browse <span class="sm:inline-block hidden">Listings</span>
           </button>
-          <button class="p-2 flex-1 border-2 text-white">
-            List <span class="sm:inline-block hidden">Vehicle</span>
+          <button class="p-2 flex-1 border-2 rounded text-white">
+            Sell <span class="sm:inline-block hidden">Your Vehicle</span>
           </button>
-          <button class="p-2 flex-1 border-2 text-white">
+          <button class="p-2 flex-1 border-2 rounded text-white">
             Cash Offer
           </button>
         </div>
       </div>
-      <h2 class="text-center text-lg my-3">
-        Browse Listings
-      </h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 my-3 mx-2 gap-x-3 gap-y-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 my-12 mx-2 gap-x-3 gap-y-6">
         <div v-for="listing in listings"
              :key="listing.id"
              class="item-listing">
@@ -45,14 +40,41 @@
             :stock-number="listing.stockNumber"
             :title="listing.title"
             :price="listing.price"
+            :badge="listing.badge"
+            :youtube="listing.youtube"
             :miles="listing.miles"
             :dealer="listing.dealer"
             :desc="listing.description"
             :image-url="listing.image" />
         </div>
+        <!-- <div class="row-start-3 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block
+        </div> -->
+        <div class="row-start-4 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block
+        </div>
+        <!-- <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block
+        </div>
+        <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block
+        </div>
+        <div class="row-start-9 col-span-2 text-xl text-center my-6 rounded py-16 px-3 bg-red-800 text-white">
+          Advertiser Block
+        </div> -->
+      </div>
+      <div class="flex px-2 py-6">
+        <a href="#" class="flex-1 py-1 px-2 border-2 border-coolGray-400 rounded flex items-center">
+          <chevronLeftIcon class="mr-2" />
+          <span>Previous</span>
+        </a>
+        <a href="#" class="flex-1 ml-auto border-2 border-coolGray-400 py-1 px-2 rounded flex items-center">
+          <span>Next</span>
+          <chevronRightIcon class="ml-2" />
+        </a>
       </div>
     </div>
-    <div class="fixed left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-0 pb-2 pt-3 bg-coolGray-200 text-coolGray-500">
+    <div class="fixed shadow-top-lg left-0 bottom-0 w-full text-sm navigation flex overflow-x-auto px-0 pb-2 pt-3 bg-coolGray-200 text-coolGray-500">
       <a href="#">
         <truckIcon class="text-coolGray-700 text-2xl mb-1" />
         Browse
@@ -93,12 +115,6 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, esse sit dignissimos odio alias rerum illo deserunt, quisquam perspiciatis facere et provident sunt repellat quod molestiae, ipsam explicabo fugit.</p>
         </div>
       </div>
     </div>
@@ -108,6 +124,8 @@
 <script>
 import listIcon from 'bootstrap-icons/icons/list.svg?inline'
 import plusIcon from 'bootstrap-icons/icons/plus-square-fill.svg?inline'
+import chevronLeftIcon from 'bootstrap-icons/icons/chevron-left.svg?inline'
+import chevronRightIcon from 'bootstrap-icons/icons/chevron-right.svg?inline'
 import emailIcon from 'bootstrap-icons/icons/envelope-open.svg?inline'
 import closeIcon from 'bootstrap-icons/icons/x.svg?inline'
 import houseIcon from 'bootstrap-icons/icons/house.svg?inline'
@@ -124,6 +142,8 @@ export default {
 	components: {
     BrandLogo,
     closeIcon,
+    chevronLeftIcon,
+    chevronRightIcon,
     listIcon,
     emailIcon,
     houseIcon,

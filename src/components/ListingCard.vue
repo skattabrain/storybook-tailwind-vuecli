@@ -1,15 +1,16 @@
 <template>
   <div
-    class="flex flex-col cursor-pointer bg-white rounded shadow hover:shadow-lg transition-shadow duration-200 w-full h-full">
+    class="flex flex-col cursor-pointer bg-white border border-coolGray-200 rounded shadow hover:shadow-lg transition-shadow duration-200 w-full h-full">
     <div class="h-28 sm:h-32 bg-coolGray-900 rounded-t text-right">
-      <div v-if="favorite" class="-translate-x-1 -translate-y-3 absolute bg-orange-500 flex items-center py-0.5 px-1.5 rounded text-white text-xs transform">
-        <starIcon class="mr-1" /> <span>We Like This One!</span>
+      <div v-if="badge" class="-translate-x-1 -translate-y-3 absolute bg-orange-500 flex items-center py-0.5 px-1.5 rounded text-white text-xs transform">
+        <starIcon class="mr-1" /> <span>{{ badge }}</span>
       </div>
       <button type="button"
               class="favorite absolute transform p-2 -translate-x-8"
+              :aria-label="favorite ? 'Remove from your favorites' : 'Add to your favorites'"
               @click.prevent="favorite = !favorite">
         <heartFillIcon v-if="favorite" class="text-red-500" />
-        <heartIcon v-else class="text-red-300 hover:text-red-500" />
+        <heartFillIcon v-else class="text-white opacity-50" />
       </button>
       <img
         :src="imageSrc"
@@ -22,15 +23,20 @@
         </span>
       </div>
     </div>
-    <div class="p-2 flex flex-col flex-grow space-y-1" @click="select">
+    <div class="p-2 flex flex-col flex-grow space-y-1.5" @click="select">
       <h3 class="text-coolGray-700 font-bold leading-5 tracking-tight truncate">
         <a :href="url">
           {{ title }}
         </a>
       </h3>
-      <p class="description leading-tight text-coolGray-500 text-sm tracking-tight flex-grow overflow-hidden">
-        {{ desc }}
-      </p>
+      <div class="flex-grow space-y-1">
+        <p class="description leading-tight text-coolGray-500 text-sm tracking-tight overflow-hidden">
+          {{ desc }}
+        </p>
+        <div v-if="youtube" class="flex items-center text-red-600 text-xs">
+          <youtubeIcon class="mr-1" /> <span>YouTube Video Listing</span>
+        </div>
+      </div>
       <div class="flex flex-row items-center">
         <div class="flex-1 font-bold text-lg text-coolGray-800">
           <span class="align-text-top text-sm">$</span>{{ price | numberFilter }}
@@ -49,14 +55,14 @@
 <script>
 import defaultImage from '@/assets/demo/no-image.gif'
 import numberFilter from '@/filters/numbers'
-import heartIcon from 'bootstrap-icons/icons/heart.svg?inline'
 import starIcon from 'bootstrap-icons/icons/star-fill.svg?inline'
+import youtubeIcon from 'bootstrap-icons/icons/collection-play-fill.svg?inline'
 import heartFillIcon from 'bootstrap-icons/icons/heart-fill.svg?inline'
 
 export default {
   name: 'ListingCard',
   components: {
-    heartIcon,
+    youtubeIcon,
     heartFillIcon,
     starIcon,
   },
@@ -73,6 +79,14 @@ export default {
       type: String,
     },
     title: {
+      default: null,
+      type: String,
+    },
+    badge: {
+      default: null,
+      type: String,
+    },
+    youtube: {
       default: null,
       type: String,
     },
@@ -123,6 +137,6 @@ export default {
     text-shadow: 1px 1px #FFF;
   }
   .description {
-    height: 52px;
+    max-height: 52px;
   }
 </style>
