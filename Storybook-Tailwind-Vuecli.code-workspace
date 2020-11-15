@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "TailwindCSS",
-			"path": "node_modules/tailwindcss/lib"
+			"path": "node_modules/tailwindcss"
 		},
 		{
 			"name": "Tailwind Labs",
