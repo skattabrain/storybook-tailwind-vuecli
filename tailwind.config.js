@@ -28,16 +28,7 @@ module.exports = {
       ...colors,
       transparent: 'transparent',
       current: 'currentColor',
-      black: '#000000',
-      white: '#ffffff',
     },
-    customForms: (theme) => ({
-      default: {
-        input: {
-          borderRadius: theme('borderRadius.none')
-        }
-      },
-    }),
     extend: {
       boxShadow: {
         lg: '0 10px 6px -8px rgba(0, 0, 0, 0.075), 0 4px 6px -8px rgba(0, 0, 0, 0.05)',
@@ -105,7 +96,7 @@ module.exports = {
     zIndex: ({ after }) => after(['hover']),
   },
   plugins: [
-    // require('@tailwindcss/custom-forms'),
+    require('@tailwindcss/forms'),
     require('./src/styles/plugins/base'),
     require('./src/styles/plugins/fonts'),
     require('./src/styles/plugins/buttons'),
