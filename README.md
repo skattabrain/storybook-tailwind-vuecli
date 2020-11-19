@@ -1,4 +1,4 @@
-# Storybook, Tailwind, Vue CLI Sample App
+# Vue, Storybook, Tailwind Starter Template
 
 ## Project setup
 Probably steer clear of PNPM at this time
@@ -6,7 +6,7 @@ Probably steer clear of PNPM at this time
 npm install
 ```
 
-### Build app
+### Build app in production mode
 ```
 npm run build
 ```
