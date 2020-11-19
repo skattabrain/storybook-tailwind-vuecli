@@ -49,6 +49,11 @@ module.exports = function ({ addBase, config, theme }) {
     h5: {
       fontSize: config('theme.fontSize.lg')[0],
       ...config('theme.fontSize.lg')[1],
+    },
+    'input:disabled': {
+      backgroundColor: theme('colors.gray.300'),
+      borderColor: theme('colors.gray.400'),
+      color: theme('colors.gray.500'),
     }
   })
 }

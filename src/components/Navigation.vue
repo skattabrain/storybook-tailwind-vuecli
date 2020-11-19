@@ -1,5 +1,5 @@
 <template>
-  <div class="main-nav">
+  <div class="bg-white shadow-sm">
     <div class="">
       <a href="#"
          class="inline-block py-2 px-3 -ml-3 no-underline">
@@ -11,7 +11,8 @@
             class="mr-2">
           <a class="py-2 px-3 no-underline"
              :href="item.url">
-            {{ item.label }}</a>
+            {{ item.label }}
+          </a>
         </li>
       </ul>
     </div>

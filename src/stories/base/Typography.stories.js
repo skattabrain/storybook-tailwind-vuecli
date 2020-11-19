@@ -2,7 +2,6 @@ import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../../tailwind.config.js'
 
 const themeConfig = resolveConfig(tailwindConfig).theme
-console.log(themeConfig)
 
 export default {
   title: 'Base/Typography',

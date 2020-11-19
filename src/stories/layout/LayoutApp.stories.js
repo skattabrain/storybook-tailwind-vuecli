@@ -1,7 +1,7 @@
 import navItems from '@/mocks/navigation';
 import LayoutApp from '@/components/LayoutApp'
 import Login from '@/components/forms/Login'
-import HomeAlt from '@/components/experiments/HomeAlt'
+import HomeAlt from '@/components/layouts/HomeAlt'
 
 export default {
   component: LayoutApp,

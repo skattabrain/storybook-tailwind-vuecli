@@ -1,26 +1,15 @@
+import navItems from '@/mocks/navigation';
 import LayoutNavigation from '@/components/Navigation.vue';
-import StoryWrapper from '@/components/utils/StoryWrapper.vue';
-
-const templateDecorator = () => ({
-  components: { StoryWrapper },
-  data: () => ({
-    wrapperWidthClasses: 'w-full',
-  }),
-  template: '<StoryWrapper :wrapper-width-classes="wrapperWidthClasses"><story /></StoryWrapper>',
-});
-
 
 export default {
   component: LayoutNavigation,
-  decorators: [
-    templateDecorator,
-  ],
   title: 'Components/Navigation',
 };
 
 export const noLinks = () => ({
   components: { LayoutNavigation },
   data: () => ({
+    navItems
   }),
-  template: '<layout-navigation />'
+  template: '<layout-navigation :items="navItems" />'
 });

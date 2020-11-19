@@ -5,10 +5,10 @@
     </div>
     <div class="content space-y-3 p-3">
       <h1 class="font-bold text-xl">
-        Limousines, Sprinters &amp; Buses For Sale
+        Exotics Cars For Sale
       </h1>
       <p>
-        Your new one-stop shop for both buying and selling new and used limousines, Mercedes-Benz Sprinters, buses and custom motorcoaches. We've been working in the luxury ground transportation industry since 1987 and we are now viewed in over 180 countries.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus porro aliquid id incidunt illo soluta quod praesentium fuga, accusamus expedita aut corrupti alias voluptas dolorem, a reiciendis, dolore pariatur hic.
       </p>
       <div class="flex space-x-2">
         <button class="p-3 bg-purple-300">
