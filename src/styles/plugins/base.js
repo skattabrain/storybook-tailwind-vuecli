@@ -1,4 +1,4 @@
-module.exports = function ({ addBase, theme }) {
+module.exports = function ({ addBase, config, theme }) {
   addBase({
     // we want a global default focus state styling
     '*:focus, button:focus': {
@@ -10,8 +10,8 @@ module.exports = function ({ addBase, theme }) {
     },
     'html': {
       color: theme('colors.grey.900'),
-      fontSize: theme('fontSize.base')[0],
-      ...theme('fontSize.base')[1],
+      fontSize: config('theme.fontSize.base')[0],
+      ...config('theme.fontSize.base')[1],
       fontWeight: theme('fontWeight.normal'),
     },
     'code': {
@@ -29,26 +29,26 @@ module.exports = function ({ addBase, theme }) {
       fontWeight: theme('fontWeight.bold')
     },
     h1: {
-      fontSize: theme('fontSize.4xl')[0],
-      ...theme('fontSize.4xl')[1],
+      fontSize: config('theme.fontSize.4xl')[0],
+      ...config('theme.fontSize.4xl')[1],
       fontWeight: theme('fontWeight.black'),
       textTransform: 'uppercase',
     },
     h2: {
-      fontSize: theme('fontSize.3xl')[0],
-      ...theme('fontSize.3xl')[1],
+      fontSize: config('theme.fontSize.3xl')[0],
+      ...config('theme.fontSize.3xl')[1],
     },
     h3: {
-      fontSize: theme('fontSize.2xl')[0],
-      ...theme('fontSize.2xl')[1],
+      fontSize: config('theme.fontSize.2xl')[0],
+      ...config('theme.fontSize.2xl')[1],
     },
     h4: {
-      fontSize: theme('fontSize.xl')[0],
-      ...theme('fontSize.xl')[1],
+      fontSize: config('theme.fontSize.xl')[0],
+      ...config('theme.fontSize.xl')[1],
     },
     h5: {
-      fontSize: theme('fontSize.lg')[0],
-      ...theme('fontSize.lg')[1],
+      fontSize: config('theme.fontSize.lg')[0],
+      ...config('theme.fontSize.lg')[1],
     }
   })
 }
