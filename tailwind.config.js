@@ -24,20 +24,8 @@ module.exports = {
     },
   },
   theme: {
-    colors: {
-      ...colors,
-      transparent: 'transparent',
-      current: 'currentColor',
-    },
+    colors,
     extend: {
-      boxShadow: {
-        lg: '0 10px 6px -8px rgba(0, 0, 0, 0.075), 0 4px 6px -8px rgba(0, 0, 0, 0.05)',
-        'top-lg': '0 -10px 6px -8px rgba(0, 0, 0, 0.075), 0 -4px 6px -8px rgba(0, 0, 0, 0.05)',
-      },
-      screens: {
-        xxl: '1440px',
-        hd: '1920px',
-      },
       fontFamily: {
         sans: [
           '"Open Sans"',
@@ -68,25 +56,19 @@ module.exports = {
         '13': '13',
         '14': '14',
         '15': '15',
+        '16': '16',
       },
-      rotate: {
-        '-15': '-15deg',
-        '-10': '-10deg',
-        '-5': '-5deg',
-        '-2.5': '-2.5deg',
-        '-1.5': '-1.5deg',
-        '-0.5': '-0.5deg',
-        '0.5': '0.5deg',
-        '1.5': '1.5deg',
-        '2.5': '2.5deg',
-        '5': '5deg',
-        '10': '10deg',
-        '15': '15deg',
+      gridRowEnd: {
+        '8': '8',
+        '9': '9',
+        '10': '10',
+        '11': '11',
+        '12': '12',
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
       },
-      animation: {
-        'spin-slower': 'spin 1.5s linear infinite',
-        'spin-slow': 'spin 2s linear infinite',
-      }
     }
   },
   variants: {
@@ -101,15 +83,4 @@ module.exports = {
     require('./src/styles/plugins/fonts'),
     require('./src/styles/plugins/buttons'),
   ],
-  experimental: {
-    uniformColorPalette: true,
-    extendedSpacingScale: true,
-    extendedFontSizeScale: true,
-  },
-  future: {
-    defaultLineHeights: true,
-    purgeLayersByDefault: true,
-    removeDeprecatedGapUtilities: true,
-    standardFontWeights: true
-  },
 }

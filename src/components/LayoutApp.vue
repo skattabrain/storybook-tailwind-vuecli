@@ -4,15 +4,18 @@
     <div class="main-content overflow-y-auto">
       <slot />
     </div>
+    <layout-footer />
   </div>
 </template>
 
 <script>
 import LayoutNavigation from '@/components/Navigation.vue';
+import LayoutFooter from '@/components/Footer.vue';
 
 export default {
   components: {
-    LayoutNavigation
+    LayoutNavigation,
+    LayoutFooter
   },
   props: {
     heading: {

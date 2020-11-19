@@ -5,7 +5,7 @@
     </div>
     <div class="content space-y-3 p-3">
       <h1 class="font-bold text-xl">
-        Limousines, Sprinters & Buses For Sale
+        Limousines, Sprinters &amp; Buses For Sale
       </h1>
       <p>
         Your new one-stop shop for both buying and selling new and used limousines, Mercedes-Benz Sprinters, buses and custom motorcoaches. We've been working in the luxury ground transportation industry since 1987 and we are now viewed in over 180 countries.

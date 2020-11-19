@@ -1,4 +1,4 @@
-import LayoutFooter from '@/components/LayoutFooter.vue';
+import Footer from '@/components/Footer.vue';
 import StoryWrapper from '@/components/utils/StoryWrapper.vue';
 
 const templateDecorator = () => ({
@@ -11,7 +11,7 @@ const templateDecorator = () => ({
 
 
 export default {
-  component: LayoutFooter,
+  component: Footer,
   decorators: [
     templateDecorator,
   ],
@@ -19,8 +19,8 @@ export default {
 };
 
 export const simple = () => ({
-  components: { LayoutFooter },
+  components: { Footer },
   data: () => ({
   }),
-  template: '<layout-footer />'
+  template: '<footer />'
 });

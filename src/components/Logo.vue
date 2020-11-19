@@ -1,7 +1,7 @@
 <template>
   <span class="brand-logo font-open-sans font-extrabold uppercase"
         :class="[dark ? 'text-gray-800' : 'text-white']">
-    We<span class="text-fuchsia-700">Sell</span>Limos<span class="text-fuchsia-700">.com</span></span>
+    My<span class="text-fuchsia-700">Company</span>.com</span>
 </template>
 
 <script>

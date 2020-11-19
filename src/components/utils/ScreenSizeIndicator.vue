@@ -20,13 +20,13 @@
       <laptopIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">lg</div>
     </span>
-    <span class="hidden xl:inline-block xxl:hidden group-hover:inline-block mx-1 xl:text-white xxl:text-gray-400">
+    <span class="hidden xl:inline-block 2xl:hidden group-hover:inline-block mx-1 xl:text-white 2xl:text-gray-400">
       <displayIcon class="hidden group-hover:inline-block" />
       <div class="indicator-label">xl</div>
     </span>
-    <span class="hidden xxl:inline-block group-hover:inline-block xxl:text-white mx-1">
+    <span class="hidden 2xl:inline-block group-hover:inline-block 2xl:text-white mx-1">
       <tvIcon class="hidden group-hover:inline-block" />
-      <div class="indicator-label">xxl</div>
+      <div class="indicator-label">2xl</div>
     </span>
   </div>
 </template>
