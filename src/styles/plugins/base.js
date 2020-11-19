@@ -1,52 +1,54 @@
-module.exports = function ({ addBase, config }) {
+module.exports = function ({ addBase, theme }) {
   addBase({
+    // we want a global default focus state styling
     '*:focus, button:focus': {
-      outline: `${config('theme.colors.blue.500')} solid 2px`,
+      outline: `${theme('colors.blue.500')} solid 2px`,
     },
+    // but only when a user is interacting with a keyboard
     '*:focus:not(:focus-visible), button:focus:not(:focus-visible)': {
       outline: 'none'
     },
     'html': {
-      color: config('theme.colors.grey.900'),
-      fontSize: config('theme.fontSize.base')[0],
-      ...config('theme.fontSize.base')[1],
-      fontWeight: config('theme.fontWeight.normal'),
+      color: theme('colors.grey.900'),
+      fontSize: theme('fontSize.base')[0],
+      ...theme('fontSize.base')[1],
+      fontWeight: theme('fontWeight.normal'),
     },
     'code': {
-      fontFamily: config('theme.fontFamily.mono'),
-      color: config('theme.colors.rose.400'),
+      fontFamily: theme('fontFamily.mono'),
+      color: theme('colors.rose.400'),
     },
     a: {
-      color: config('theme.colors.blue.500'),
+      color: theme('colors.blue.500'),
       textDecoration: 'underline',
       '&:hover': {
-        color: config('theme.colors.blue.700'),
+        color: theme('colors.blue.700'),
       }
     },
     'h1, h2, h3, h4, h5, h6': {
-      fontWeight: config('theme.fontWeight.bold')
+      fontWeight: theme('fontWeight.bold')
     },
     h1: {
-      fontSize: config('theme.fontSize.4xl')[0],
-      ...config('theme.fontSize.4xl')[1],
-      fontWeight: config('theme.fontWeight.black'),
+      fontSize: theme('fontSize.4xl')[0],
+      ...theme('fontSize.4xl')[1],
+      fontWeight: theme('fontWeight.black'),
       textTransform: 'uppercase',
     },
     h2: {
-      fontSize: config('theme.fontSize.3xl')[0],
-      ...config('theme.fontSize.3xl')[1],
+      fontSize: theme('fontSize.3xl')[0],
+      ...theme('fontSize.3xl')[1],
     },
     h3: {
-      fontSize: config('theme.fontSize.2xl')[0],
-      ...config('theme.fontSize.2xl')[1],
+      fontSize: theme('fontSize.2xl')[0],
+      ...theme('fontSize.2xl')[1],
     },
     h4: {
-      fontSize: config('theme.fontSize.xl')[0],
-      ...config('theme.fontSize.xl')[1],
+      fontSize: theme('fontSize.xl')[0],
+      ...theme('fontSize.xl')[1],
     },
     h5: {
-      fontSize: config('theme.fontSize.lg')[0],
-      ...config('theme.fontSize.lg')[1],
+      fontSize: theme('fontSize.lg')[0],
+      ...theme('fontSize.lg')[1],
     }
   })
 }

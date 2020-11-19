@@ -1,17 +1,23 @@
-module.exports = function ({ addComponents, config }) {
+module.exports = function ({ addComponents, theme }) {
   addComponents({
     '.btn': {
       display: 'inline-flex',
       justifyContent: 'center',
       alignItems: 'center',
-      color: config('theme.colors.gray.900'),
-      backgroundColor: config('theme.colors.gray.300'),
-      borderColor: config('theme.colors.gray.300'),
-      borderWidth: config('theme.borderWidth.default'),
-      borderRadius: config('theme.borderRadius.none'),
-      padding: config('theme.spacing.3'),
-      fontSize: config('theme.fontSize.base')[0],
-      lineHeight: config('theme.lineHeight.none'),
+      color: theme('colors.gray.900'),
+      backgroundColor: theme('colors.gray.300'),
+      borderColor: theme('colors.gray.300'),
+      borderWidth: theme('borderWidth.default'),
+      borderRadius: theme('borderRadius.none'),
+      padding: theme('spacing.3'),
+      fontSize: theme('fontSize.base')[0],
+      lineHeight: theme('lineHeight.none'),
+
+      '&.btn--primary': {
+        backgroundColor: theme('colors.blue.500'),
+        borderColor: theme('colors.blue.500'),
+        color: theme('colors.blue.50')
+      }
     }
   })
 }
