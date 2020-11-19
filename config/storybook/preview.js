@@ -3,6 +3,7 @@ import { addParameters } from '@storybook/vue'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { colorMapFlat } from '../../src/utils/colors.js'
 import Vue from 'vue'
+import 'focus-visible'
 import ScreenSizeIndicator from '@/components/utils/ScreenSizeIndicator.vue';
 require('typeface-open-sans')
 require('typeface-nunito-sans')

@@ -3,6 +3,9 @@ module.exports = function ({ addBase, config }) {
     '*:focus, button:focus': {
       outline: `${config('theme.colors.blue.500')} solid 2px`,
     },
+    '*:focus:not(:focus-visible), button:focus:not(:focus-visible)': {
+      outline: 'none'
+    },
     'html': {
       color: config('theme.colors.grey.900'),
       fontSize: config('theme.fontSize.base')[0],
