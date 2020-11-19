@@ -24,8 +24,8 @@
       </div>
     </div>
     <div class="p-2 flex flex-col flex-grow space-y-1.5" @click="select">
-      <h3 class="text-coolGray-700 font-bold leading-5 tracking-tight truncate">
-        <a :href="url">
+      <h3 class="text-base tracking-tight truncate">
+        <a :href="url" class="text-coolGray-700 hover:text-coolGray-900 no-underline">
           {{ title }}
         </a>
       </h3>

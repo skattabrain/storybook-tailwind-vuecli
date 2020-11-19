@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white shadow">
-    <div class="container py-4">
-      <h1 class="text-2xl font-bold leading-tight text-gray-900">
+    <div class="container p-4">
+      <h1 class="text-gray-900">
         {{ heading }}
       </h1>
     </div>

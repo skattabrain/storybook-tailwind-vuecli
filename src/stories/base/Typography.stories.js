@@ -51,7 +51,7 @@ export const TextSizes = (args) => ({
   <div v-for="(value, name, i) in themeConfig.fontSize" :key="i" class="space-y-1">
     <div><code>.text-{{ name }}</code></div>
     <div :class="['text-' + name ]">{{ shortText }}</div>
-    <div :class="['text-' + name ]">This is for demonstrating associated <code>line-height</code> &ndash; {{ longText }}</div>
+    <div :class="['text-' + name ]">This is for demonstrating associated <code>line-height</code> and <strong>this is bold</strong> &ndash; {{ longText }}</div>
   </div>
 </div>
 `
