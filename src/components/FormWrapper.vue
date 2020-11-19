@@ -6,11 +6,9 @@
     <slot />
 
     <button type="submit"
-            class="btn w-full mt-4"
+            class="btn btn--primary w-full mt-4"
             @click.prevent="submitForm">
-      <div class="absolute transition-opacity duration-100 opacity-0" :class="{ 'opacity-100' : working }">
-        <WorkingIcon class="animate-spin-slower" />
-      </div>
+      <WorkingIcon class="animate-spin absolute transition-opacity duration-100 opacity-0" :class="{ 'opacity-100' : working }" />
       <div class="transition-opacity duration-100" :class="{ 'opacity-0' : working }">
         {{ submitLabel }}
       </div>
