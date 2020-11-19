@@ -41,9 +41,9 @@ export default {
 <style lang="css" scoped>
   .app {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
   }
   .app.app-simple {
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr auto;
   }
 </style>

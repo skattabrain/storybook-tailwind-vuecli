@@ -2,14 +2,14 @@
   <div class="main-nav">
     <div class="">
       <a href="#"
-         class="inline-block py-2 px-3 -ml-3">
+         class="inline-block py-2 px-3 -ml-3 no-underline">
         <brand-logo :dark="true" />
       </a>
       <ul v-if="items" class="inline-flex">
         <li v-for="item in items"
             :key="item.label"
             class="mr-2">
-          <a class="py-2 px-3"
+          <a class="py-2 px-3 no-underline"
              :href="item.url">
             {{ item.label }}</a>
         </li>
@@ -33,9 +33,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css" scoped>
-a {
-  text-decoration: none;
-}
-</style>
