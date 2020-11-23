@@ -6,6 +6,9 @@ import HomeAlt from '@/components/layouts/HomeAlt'
 export default {
   component: LayoutApp,
   title: 'Layout/App',
+  parameters: {
+    layout: 'fullsreen'
+  }
 };
 
 export const StickyHeaderFooter = () => ({

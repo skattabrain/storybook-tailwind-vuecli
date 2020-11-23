@@ -142,7 +142,6 @@ addParameters({
     default: 'bg-gray-200',
     values: colorMapFlat(),
   },
-  layout: 'fullscreen',
   viewport: {
     viewports: INITIAL_VIEWPORTS
   },
