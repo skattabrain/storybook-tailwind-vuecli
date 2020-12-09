@@ -34,6 +34,12 @@ export const MobileGridLayout = () => ({
   template: '<HomeAlt />'
 });
 
+MobileGridLayout.parameters = {
+  viewport: {
+    defaultViewport: 'iphonexr'
+  },
+};
+
 export const LoginForm = () => ({
   components: { Login, LayoutApp },
   data: () => ({
