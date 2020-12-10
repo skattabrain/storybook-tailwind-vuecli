@@ -9,6 +9,7 @@
       </span>
       <span class="mr-2">{{ message }}</span>
       <button class="ml-auto underline text-2xl"
+              aria-label="Dismiss"
               @click.prevent="dismiss">
         <CloseIcon />
       </button>
@@ -55,7 +56,7 @@ export default {
 
 <style lang="css" scoped>
   .alert-error {
-    @apply bg-red-500 text-red-50;
+    @apply bg-red-600 text-white;
   }
 
   .fade-enter-active, .fade-leave-active {
