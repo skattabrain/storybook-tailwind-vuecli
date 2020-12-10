@@ -14,8 +14,8 @@ module.exports = function ({ addComponents, theme }) {
       lineHeight: theme('lineHeight.none'),
 
       '&.btn--primary': {
-        backgroundColor: theme('colors.blue.500'),
-        borderColor: theme('colors.blue.500'),
+        backgroundColor: theme('colors.blue.600'),
+        borderColor: theme('colors.blue.600'),
         color: theme('colors.blue.50')
       }
     }
