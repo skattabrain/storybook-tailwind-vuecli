@@ -38,6 +38,9 @@ MobileGridLayout.parameters = {
   viewport: {
     defaultViewport: 'iphonexr'
   },
+  chromatic: {
+    viewports: [375, 414]
+  },
 };
 
 export const LoginForm = () => ({
