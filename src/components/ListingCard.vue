@@ -2,7 +2,7 @@
   <div
     class="flex flex-col cursor-pointer bg-white border border-coolGray-200 rounded shadow hover:shadow-lg transition-shadow duration-200 w-full h-full">
     <div class="h-28 sm:h-32 bg-coolGray-900 rounded-t text-right">
-      <div v-if="badge" class="-translate-x-1 -translate-y-3 absolute bg-orange-500 flex items-center py-0.5 px-1.5 rounded text-white text-xs transform">
+      <div v-if="badge" class="-translate-x-1 -translate-y-3 absolute bg-orange-700 flex items-center py-0.5 px-1.5 rounded text-white text-xs transform">
         <starIcon class="mr-1" /> <span>{{ badge }}</span>
       </div>
       <button type="button"
