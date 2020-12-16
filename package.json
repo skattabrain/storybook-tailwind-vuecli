@@ -56,6 +56,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^4.0.4",
     "postcss-nested": "^4.2.3",
+    "storybook-mobile": "^0.1.28",
     "stylelint-config-recommended": "^3.0.0",
     "vue-cli-plugin-storybook": "~2.0.0",
     "vue-docgen-loader": "^1.5.0",
