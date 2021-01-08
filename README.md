@@ -1,7 +1,7 @@
 # Vue, Storybook, Tailwind Starter Template
 
 ## Project setup
-Probably steer clear of PNPM at this time
+Probably steer clear of PNPM at this time, developed on Node 14.5.x
 ```
 npm install
 ```
