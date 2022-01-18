@@ -11,7 +11,7 @@
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "tailwind:build": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css",
     "tailwind:build:purge": "npx tailwindcss build ./src/styles/index.css -o ./src/styles.css -purge",
-    "chromatic": "npx chromatic --project-token h92yxebv0iu --build-script-name=storybook:build"
+    "chromatic": "npx chromatic --build-script-name=storybook:build"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
